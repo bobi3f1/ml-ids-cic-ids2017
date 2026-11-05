@@ -1,0 +1,313 @@
+﻿,,BENIGN,PortScan
+Destination Port,mean,7516.576690052314,8525.549158215792
+Destination Port,std,17658.22744960457,13379.21648335699
+Destination Port,min,0.0,0.0
+Destination Port,max,65300.0,65389.0
+Flow Duration,mean,12391639.436822256,144896.7543795902
+Flow Duration,std,31991401.502290156,3075330.5617313287
+Flow Duration,min,-13.0,0.0
+Flow Duration,max,119999949.0,119809735.0
+Total Fwd Packets,mean,6.6784703353745085,1.0307314548717779
+Total Fwd Packets,std,29.43414726559433,0.56261592881886
+Total Fwd Packets,min,1.0,1.0
+Total Fwd Packets,max,3119.0,150.0
+Total Backward Packets,mean,6.858218094813253,1.0086765985091226
+Total Backward Packets,std,42.8922343912243,0.19237950810575455
+Total Backward Packets,min,0.0,0.0
+Total Backward Packets,max,3635.0,30.0
+Total Length of Fwd Packets,mean,538.4405369236384,1.170305773021064
+Total Length of Fwd Packets,std,2814.222366821557,7.43809475543252
+Total Length of Fwd Packets,min,0.0,0.0
+Total Length of Fwd Packets,max,232349.0,1473.0
+Total Length of Bwd Packets,mean,6272.64767427714,16.91617392836301
+Total Length of Bwd Packets,std,77560.30124529506,353.5270683242908
+Total Length of Bwd Packets,min,0.0,0.0
+Total Length of Bwd Packets,max,7150819.0,11595.0
+Fwd Packet Length Max,mean,186.19923760087596,1.136403175546967
+Fwd Packet Length Max,std,479.73547262423847,4.57830420605888
+Fwd Packet Length Max,min,0.0,0.0
+Fwd Packet Length Max,max,13929.0,397.0
+Fwd Packet Length Min,mean,22.10388904659556,0.9923914599367973
+Fwd Packet Length Min,std,33.01283013470711,1.0120600187239162
+Fwd Packet Length Min,min,0.0,0.0
+Fwd Packet Length Min,max,1472.0,48.0
+Fwd Packet Length Mean,mean,54.097116580522936,1.0309168052207136
+Fwd Packet Length Mean,std,112.53848382231753,1.501729369429669
+Fwd Packet Length Mean,min,0.0,0.0
+Fwd Packet Length Mean,max,3412.938776,147.3
+Fwd Packet Length Std,mean,57.067581030274575,0.07171374517978617
+Fwd Packet Length Std,std,173.4039923224706,2.0753538893330186
+Fwd Packet Length Std,min,0.0,0.0
+Fwd Packet Length Std,max,3541.466551,190.5868423
+Bwd Packet Length Max,mean,419.1598523865526,10.882315374536166
+Bwd Packet Length Max,std,826.16979919022,159.39088910127015
+Bwd Packet Length Max,min,0.0,0.0
+Bwd Packet Length Max,max,10136.0,5792.0
+Bwd Packet Length Min,mean,55.30955837625208,5.929199837038505
+Bwd Packet Length Min,std,73.29571030314848,0.6321556172649437
+Bwd Packet Length Min,min,0.0,0.0
+Bwd Packet Length Min,max,1460.0,48.0
+Bwd Packet Length Mean,mean,167.7016294937644,7.887706142174104
+Bwd Packet Length Mean,std,281.49026147783434,62.67757086441366
+Bwd Packet Length Mean,min,0.0,0.0
+Bwd Packet Length Mean,max,2442.523124,2315.2
+Bwd Packet Length Std,mean,127.97319923067707,2.0899331813715194
+Bwd Packet Length Std,std,278.1594480159863,67.04231837787756
+Bwd Packet Length Std,min,0.0,0.0
+Bwd Packet Length Std,max,2498.439473,2628.883261
+Flow Bytes/s,mean,2169275.688585896,262846.45376592764
+Flow Bytes/s,std,39026556.01495585,619359.7212440702
+Flow Bytes/s,min,-193000000.0,0.0
+Flow Bytes/s,max,2070000000.0,8000000.0
+Flow Packets/s,mean,57022.73069300627,74649.02743067188
+Flow Packets/s,std,245380.48631490362,173376.02250177483
+Flow Packets/s,min,-2000000.0,0.033386269
+Flow Packets/s,max,3000000.0,2000000.0
+Flow IAT Mean,mean,764145.7218110702,46147.123463606215
+Flow IAT Mean,std,3072948.970822753,1000604.4753900463
+Flow IAT Mean,min,-13.0,0.0
+Flow IAT Mean,max,98100000.0,39900000.0
+Flow IAT Std,mean,1495574.6064604477,79918.63720957848
+Flow IAT Std,std,5538900.9037144035,1731775.3625640157
+Flow IAT Std,min,0.0,0.0
+Flow IAT Std,max,84800000.0,69200000.0
+Flow IAT Max,mean,4128042.2163266963,140474.59921382088
+Flow IAT Max,std,13176872.938797213,3006277.5155469626
+Flow IAT Max,min,-13.0,0.0
+Flow IAT Max,max,120000000.0,120000000.0
+Flow IAT Min,mean,26567.197712802626,118.0570475341063
+Flow IAT Min,std,578855.0630174484,11727.948466271768
+Flow IAT Min,min,-13.0,0.0
+Flow IAT Min,max,98100000.0,2226047.0
+Fwd IAT Total,mean,12103546.954256052,144656.52839163612
+Fwd IAT Total,std,31852116.68779938,3075991.6331931558
+Fwd IAT Total,min,0.0,0.0
+Fwd IAT Total,max,120000000.0,120000000.0
+Fwd IAT Mean,mean,1709368.8086161437,136791.51428707357
+Fwd IAT Mean,std,8655845.305207765,2998173.196722887
+Fwd IAT Mean,min,0.0,0.0
+Fwd IAT Mean,max,120000000.0,120000000.0
+Fwd IAT Std,mean,1179266.667981804,3500.147073216352
+Fwd IAT Std,std,3822700.552186949,126338.2931240324
+Fwd IAT Std,min,0.0,0.0
+Fwd IAT Std,max,81200000.0,18000000.0
+Fwd IAT Max,mean,4017119.3534531,140258.88746848126
+Fwd IAT Max,std,13172286.964259079,3006144.923285328
+Fwd IAT Max,min,0.0,0.0
+Fwd IAT Max,max,120000000.0,120000000.0
+Fwd IAT Min,mean,942866.3715073604,134169.3392682148
+Fwd IAT Min,std,8395016.782090079,2996675.54671654
+Fwd IAT Min,min,0.0,0.0
+Fwd IAT Min,max,120000000.0,120000000.0
+Bwd IAT Total,mean,11440437.662468065,140409.11655050155
+Bwd IAT Total,std,31132974.984374452,3024507.6995979655
+Bwd IAT Total,min,0.0,0.0
+Bwd IAT Total,max,120000000.0,120000000.0
+Bwd IAT Mean,mean,1751731.3524856423,136603.0985623309
+Bwd IAT Mean,std,9073052.452922992,2998467.450427243
+Bwd IAT Mean,min,0.0,0.0
+Bwd IAT Mean,max,120000000.0,120000000.0
+Bwd IAT Std,mean,918991.6776576766,2082.227026083259
+Bwd IAT Std,std,3547085.950526768,99254.32055684082
+Bwd IAT Std,min,0.0,0.0
+Bwd IAT Std,max,81300000.0,18000000.0
+Bwd IAT Max,mean,3544491.0234883814,139225.81142712428
+Bwd IAT Max,std,12762250.506810606,3002984.094476447
+Bwd IAT Max,min,0.0,0.0
+Bwd IAT Max,max,120000000.0,120000000.0
+Bwd IAT Min,mean,1074446.8664422727,135393.79384269813
+Bwd IAT Min,std,8811568.27561737,2997865.1444551875
+Bwd IAT Min,min,0.0,0.0
+Bwd IAT Min,max,120000000.0,120000000.0
+Fwd PSH Flags,mean,0.048087919218135364,0.0
+Fwd PSH Flags,std,0.21395289788708244,0.0
+Fwd PSH Flags,min,0.0,0.0
+Fwd PSH Flags,max,1.0,0.0
+Bwd PSH Flags,mean,0.0,0.0
+Bwd PSH Flags,std,0.0,0.0
+Bwd PSH Flags,min,0.0,0.0
+Bwd PSH Flags,max,0.0,0.0
+Fwd URG Flags,mean,0.0,0.0
+Fwd URG Flags,std,0.0,0.0
+Fwd URG Flags,min,0.0,0.0
+Fwd URG Flags,max,0.0,0.0
+Bwd URG Flags,mean,0.0,0.0
+Bwd URG Flags,std,0.0,0.0
+Bwd URG Flags,min,0.0,0.0
+Bwd URG Flags,max,0.0,0.0
+Fwd Header Length,mean,169.52749097692526,32.92557724705183
+Fwd Header Length,std,760.4593137314079,11.769342811211326
+Fwd Header Length,min,0.0,0.0
+Fwd Header Length,max,79632.0,328.0
+Bwd Header Length,mean,175.73124619814266,20.41506733172574
+Bwd Header Length,std,1057.7972561296012,6.108679762507902
+Bwd Header Length,min,0.0,0.0
+Bwd Header Length,max,81288.0,296.0
+Fwd Packets/s,mean,46206.9030721549,35960.182392152565
+Fwd Packets/s,std,211084.53147093562,78984.15794139447
+Fwd Packets/s,min,0.0,0.0
+Fwd Packets/s,max,3000000.0,1000000.0
+Bwd Packets/s,mean,7906.711377854439,35936.1170854914
+Bwd Packets/s,std,54539.04084963143,78994.28669361872
+Bwd Packets/s,min,0.0,0.0
+Bwd Packets/s,max,2000000.0,1000000.0
+Min Packet Length,mean,21.58104546007543,0.9923914599367973
+Min Packet Length,std,23.56845299897302,1.0120600187239162
+Min Packet Length,min,0.0,0.0
+Min Packet Length,max,289.0,48.0
+Max Packet Length,mean,467.9527150330508,10.923969653927042
+Max Packet Length,std,896.1348333159995,159.40424104019618
+Max Packet Length,min,0.0,0.0
+Max Packet Length,max,13929.0,5792.0
+Packet Length Mean,mean,106.16210619524733,3.6901722378686177
+Packet Length Mean,std,166.60819355289527,33.42520481177522
+Packet Length Mean,min,0.0,0.0
+Packet Length Mean,max,1588.0,1161.3
+Packet Length Std,mean,138.22978540456424,4.618416684437628
+Packet Length Std,std,247.39329282522252,55.92279131645894
+Packet Length Std,min,0.0,0.0
+Packet Length Std,max,2497.019924,2137.603541
+Packet Length Variance,mean,80310.41850973852,3148.6539258109656
+Packet Length Variance,std,224357.0423521046,103913.3852488802
+Packet Length Variance,min,0.0,0.0
+Packet Length Variance,max,6235108.501,4569348.9
+FIN Flag Count,mean,0.010665477107749706,0.0
+FIN Flag Count,std,0.10272200488518528,0.0
+FIN Flag Count,min,0.0,0.0
+FIN Flag Count,max,1.0,0.0
+SYN Flag Count,mean,0.048087919218135364,0.0
+SYN Flag Count,std,0.21395289788708244,0.0
+SYN Flag Count,min,0.0,0.0
+SYN Flag Count,max,1.0,0.0
+RST Flag Count,mean,0.0001703232085648242,0.0
+RST Flag Count,std,0.013049734854536737,0.0
+RST Flag Count,min,0.0,0.0
+RST Flag Count,max,1.0,0.0
+PSH Flag Count,mean,0.24660367411492762,0.9992512579966747
+PSH Flag Count,std,0.43103573972047154,0.027353055167343664
+PSH Flag Count,min,0.0,0.0
+PSH Flag Count,max,1.0,1.0
+ACK Flag Count,mean,0.2754126282493207,0.0006716656206300444
+ACK Flag Count,std,0.44672377485927856,0.02590795006728632
+ACK Flag Count,min,0.0,0.0
+ACK Flag Count,max,1.0,1.0
+URG Flag Count,mean,0.10140719412790462,4.404364725442914e-05
+URG Flag Count,std,0.3018683722819172,0.0066364291871654525
+URG Flag Count,min,0.0,0.0
+URG Flag Count,max,1.0,1.0
+CWE Flag Count,mean,0.0,0.0
+CWE Flag Count,std,0.0,0.0
+CWE Flag Count,min,0.0,0.0
+CWE Flag Count,max,0.0,0.0
+ECE Flag Count,mean,0.0001703232085648242,0.0
+ECE Flag Count,std,0.013049734854536737,0.0
+ECE Flag Count,min,0.0,0.0
+ECE Flag Count,max,1.0,0.0
+Down/Up Ratio,mean,0.6813090555172554,0.9876567678569462
+Down/Up Ratio,std,0.6247076739007901,0.11586305148595466
+Down/Up Ratio,min,0.0,0.0
+Down/Up Ratio,max,124.0,2.0
+Average Packet Size,mean,121.07690023563681,5.118043159956022
+Average Packet Size,std,174.4410148997515,36.930570078925015
+Average Packet Size,min,0.0,0.0
+Average Packet Size,max,2068.0,1290.333333
+Avg Fwd Segment Size,mean,54.097116580522936,1.0309168052207136
+Avg Fwd Segment Size,std,112.53848382231753,1.501729369429669
+Avg Fwd Segment Size,min,0.0,0.0
+Avg Fwd Segment Size,max,3412.938776,147.3
+Avg Bwd Segment Size,mean,167.70162949378062,7.887706142174104
+Avg Bwd Segment Size,std,281.49026147790903,62.67757086441366
+Avg Bwd Segment Size,min,0.0,0.0
+Avg Bwd Segment Size,max,2442.523124,2315.2
+Fwd Header Length.1,mean,169.52749097692526,32.92557724705183
+Fwd Header Length.1,std,760.4593137314079,11.769342811211326
+Fwd Header Length.1,min,0.0,0.0
+Fwd Header Length.1,max,79632.0,328.0
+Fwd Avg Bytes/Bulk,mean,0.0,0.0
+Fwd Avg Bytes/Bulk,std,0.0,0.0
+Fwd Avg Bytes/Bulk,min,0.0,0.0
+Fwd Avg Bytes/Bulk,max,0.0,0.0
+Fwd Avg Packets/Bulk,mean,0.0,0.0
+Fwd Avg Packets/Bulk,std,0.0,0.0
+Fwd Avg Packets/Bulk,min,0.0,0.0
+Fwd Avg Packets/Bulk,max,0.0,0.0
+Fwd Avg Bulk Rate,mean,0.0,0.0
+Fwd Avg Bulk Rate,std,0.0,0.0
+Fwd Avg Bulk Rate,min,0.0,0.0
+Fwd Avg Bulk Rate,max,0.0,0.0
+Bwd Avg Bytes/Bulk,mean,0.0,0.0
+Bwd Avg Bytes/Bulk,std,0.0,0.0
+Bwd Avg Bytes/Bulk,min,0.0,0.0
+Bwd Avg Bytes/Bulk,max,0.0,0.0
+Bwd Avg Packets/Bulk,mean,0.0,0.0
+Bwd Avg Packets/Bulk,std,0.0,0.0
+Bwd Avg Packets/Bulk,min,0.0,0.0
+Bwd Avg Packets/Bulk,max,0.0,0.0
+Bwd Avg Bulk Rate,mean,0.0,0.0
+Bwd Avg Bulk Rate,std,0.0,0.0
+Bwd Avg Bulk Rate,min,0.0,0.0
+Bwd Avg Bulk Rate,max,0.0,0.0
+Subflow Fwd Packets,mean,6.6784703353745085,1.0307314548717779
+Subflow Fwd Packets,std,29.43414726559433,0.56261592881886
+Subflow Fwd Packets,min,1.0,1.0
+Subflow Fwd Packets,max,3119.0,150.0
+Subflow Fwd Bytes,mean,538.4405369236384,1.170305773021064
+Subflow Fwd Bytes,std,2814.222366821557,7.43809475543252
+Subflow Fwd Bytes,min,0.0,0.0
+Subflow Fwd Bytes,max,232349.0,1473.0
+Subflow Bwd Packets,mean,6.858218094813253,1.0086765985091226
+Subflow Bwd Packets,std,42.8922343912243,0.19237950810575455
+Subflow Bwd Packets,min,0.0,0.0
+Subflow Bwd Packets,max,3635.0,30.0
+Subflow Bwd Bytes,mean,6272.64767427714,16.91617392836301
+Subflow Bwd Bytes,std,77560.30124529506,353.5270683242908
+Subflow Bwd Bytes,min,0.0,0.0
+Subflow Bwd Bytes,max,7150819.0,11595.0
+Init_Win_bytes_forward,mean,6136.517320248186,15208.676829738271
+Init_Win_bytes_forward,std,12815.104362922737,14116.896188868812
+Init_Win_bytes_forward,min,-1.0,-1.0
+Init_Win_bytes_forward,max,65535.0,64240.0
+Init_Win_bytes_backward,mean,2453.1795368830853,309.5182615972429
+Init_Win_bytes_backward,std,9645.493988900029,2981.573748775066
+Init_Win_bytes_backward,min,-1.0,-1.0
+Init_Win_bytes_backward,max,65535.0,29200.0
+act_data_pkt_fwd,mean,3.9677034754045177,0.006958896266199804
+act_data_pkt_fwd,std,22.508152816318546,0.08431337210290052
+act_data_pkt_fwd,min,0.0,0.0
+act_data_pkt_fwd,max,2056.0,4.0
+min_seg_size_forward,mean,25.43488381523987,31.969830101630716
+min_seg_size_forward,std,6.326592083502653,7.997266962574853
+min_seg_size_forward,min,0.0,0.0
+min_seg_size_forward,max,60.0,40.0
+Active Mean,mean,79123.21857843992,118.62922850945286
+Active Mean,std,707569.0151039958,15943.260762951097
+Active Mean,min,0.0,0.0
+Active Mean,max,110000000.0,2368532.333
+Active Std,mean,53318.41980805707,5.357512692278047
+Active Std,std,397795.74436660286,1167.9697515563016
+Active Std,min,0.0,0.0
+Active Std,max,70500000.0,295817.9054
+Active Max,mean,180801.42836286954,127.87341855779077
+Active Max,std,1110778.8963023587,17296.78378075258
+Active Max,min,0.0,0.0
+Active Max,max,110000000.0,2686269.0
+Active Min,mean,50367.121091690664,113.10289697089816
+Active Min,std,642473.9892648606,15191.15974200643
+Active Min,min,0.0,0.0
+Active Min,max,110000000.0,2226047.0
+Idle Mean,mean,3621748.30043739,139346.9045574164
+Idle Mean,std,12701967.839090163,3003815.0570007483
+Idle Mean,min,0.0,0.0
+Idle Mean,max,120000000.0,120000000.0
+Idle Std,mean,142123.72403660676,107.40369026965723
+Idle Std,std,1851788.9371428676,30584.386644910766
+Idle Std,min,0.0,0.0
+Idle Std,max,70500000.0,9208869.311
+Idle Max,mean,3724304.9887343366,139582.5380702276
+Idle Max,std,13003467.71328631,3005759.385684545
+Idle Max,min,0.0,0.0
+Idle Max,max,120000000.0,120000000.0
+Idle Min,mean,3466842.853165173,139297.35545425516
+Idle Min,std,12534479.20964368,3003608.60579985
+Idle Min,min,0.0,0.0
+Idle Min,max,120000000.0,120000000.0

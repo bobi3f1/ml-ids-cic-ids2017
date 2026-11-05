@@ -1,0 +1,159 @@
+[
+  {
+    "attack": "DDoS",
+    "algorithm": "RF",
+    "train_accuracy": 1.0,
+    "cv_accuracy_mean": 0.9998335229595057,
+    "cv_accuracy_std": 3.733685721757809e-05,
+    "cv_f1_mean": 0.9998549150736096,
+    "cv_f1_std": 3.253980882102042e-05,
+    "validation_accuracy": 0.999833523287531,
+    "test_accuracy": 0.999790838736666,
+    "test_roc_auc": 0.9999724452809559,
+    "best_params": {
+      "max_depth": null,
+      "n_estimators": 200
+    },
+    "gap_train_test_pp": 0.02091612633340345,
+    "gap_val_test_pp": 0.00426845508649798,
+    "test_vs_cv_sigma": -1.1432194892828464
+  },
+  {
+    "attack": "DDoS",
+    "algorithm": "KNN",
+    "train_accuracy": 1.0,
+    "cv_accuracy_mean": 0.9998655387368623,
+    "cv_accuracy_std": 9.582881280285648e-05,
+    "cv_f1_mean": 0.999882839428777,
+    "cv_f1_std": 8.348521456211129e-05,
+    "validation_accuracy": 0.9998655380399288,
+    "test_accuracy": 0.9998207189171423,
+    "test_roc_auc": 0.9998212359023245,
+    "best_params": {
+      "n_neighbors": 1,
+      "weights": "uniform"
+    },
+    "gap_train_test_pp": 0.01792810828576963,
+    "gap_val_test_pp": 0.004481912278653244,
+    "test_vs_cv_sigma": -0.4677071374373465
+  },
+  {
+    "attack": "PortScan",
+    "algorithm": "RF",
+    "train_accuracy": 1.0,
+    "cv_accuracy_mean": 0.999886575037066,
+    "cv_accuracy_std": 3.402120384210255e-05,
+    "cv_f1_mean": 0.9998662807775867,
+    "cv_f1_std": 4.011016061705703e-05,
+    "validation_accuracy": 0.9998865751706376,
+    "test_accuracy": 0.9998131859578112,
+    "test_roc_auc": 0.9999431892541415,
+    "best_params": {
+      "max_depth": 20,
+      "n_estimators": 50
+    },
+    "gap_train_test_pp": 0.01868140421887876,
+    "gap_val_test_pp": 0.007338921282640243,
+    "test_vs_cv_sigma": -2.1571570364004105
+  },
+  {
+    "attack": "PortScan",
+    "algorithm": "KNN",
+    "train_accuracy": 1.0,
+    "cv_accuracy_mean": 0.9999399517389836,
+    "cv_accuracy_std": 3.890398325079448e-05,
+    "cv_f1_mean": 0.9999292171501925,
+    "cv_f1_std": 4.585757016184462e-05,
+    "validation_accuracy": 0.9999399515609259,
+    "test_accuracy": 0.9999377286526038,
+    "test_roc_auc": 0.9999265927449853,
+    "best_params": {
+      "n_neighbors": 3,
+      "weights": "distance"
+    },
+    "gap_train_test_pp": 0.006227134739622553,
+    "gap_val_test_pp": 0.00022229083220803858,
+    "test_vs_cv_sigma": -0.0571428988527986
+  },
+  {
+    "attack": "DoS",
+    "algorithm": "MLP",
+    "train_accuracy": 0.9982174604659867,
+    "cv_accuracy_mean": 0.9987929259848414,
+    "cv_accuracy_std": 8.083256546818312e-05,
+    "cv_f1_mean": 0.9980998239496414,
+    "cv_f1_std": 0.00012686132904102747,
+    "validation_accuracy": 0.9987929259848414,
+    "test_accuracy": 0.9980950509532933,
+    "test_roc_auc": 0.9999850750819945,
+    "best_params": {
+      "alpha": 0.001,
+      "hidden_layer_sizes": [
+        64
+      ]
+    },
+    "gap_train_test_pp": 0.012240951269337774,
+    "gap_val_test_pp": 0.06978750315480564,
+    "test_vs_cv_sigma": -8.633587558503883
+  },
+  {
+    "attack": "DoS",
+    "algorithm": "LR",
+    "train_accuracy": 0.9909796949564892,
+    "cv_accuracy_mean": 0.9909422663048563,
+    "cv_accuracy_std": 0.00030951212098374067,
+    "cv_f1_mean": 0.985813711032945,
+    "cv_f1_std": 0.00048228782231878823,
+    "validation_accuracy": 0.9909422663048564,
+    "test_accuracy": 0.9914140835230095,
+    "test_roc_auc": 0.999303281799426,
+    "best_params": {
+      "C": 100,
+      "class_weight": null
+    },
+    "gap_train_test_pp": -0.04343885665203384,
+    "gap_val_test_pp": -0.04718172181531477,
+    "test_vs_cv_sigma": 1.5243901164634657
+  },
+  {
+    "attack": "BruteForce",
+    "algorithm": "MLP",
+    "train_accuracy": 0.9997595584002167,
+    "cv_accuracy_mean": 0.9998035829184868,
+    "cv_accuracy_std": 8.127603372956593e-05,
+    "cv_f1_mean": 0.9954566020302551,
+    "cv_f1_std": 0.001888737782966312,
+    "validation_accuracy": 0.9998035829184869,
+    "test_accuracy": 0.9997313399813519,
+    "test_roc_auc": 0.9999114027697328,
+    "best_params": {
+      "alpha": 0.0001,
+      "hidden_layer_sizes": [
+        64,
+        32
+      ]
+    },
+    "gap_train_test_pp": 0.0028218418864800476,
+    "gap_val_test_pp": 0.007224293713503638,
+    "test_vs_cv_sigma": -0.8888590377737073
+  },
+  {
+    "attack": "BruteForce",
+    "algorithm": "LR",
+    "train_accuracy": 0.999471705780758,
+    "cv_accuracy_mean": 0.9994209082596768,
+    "cv_accuracy_std": 0.00010011680381384074,
+    "cv_f1_mean": 0.9867366179037157,
+    "cv_f1_std": 0.0022953745580258293,
+    "validation_accuracy": 0.9994209082596769,
+    "test_accuracy": 0.9995495993805016,
+    "test_roc_auc": 0.9999078172306174,
+    "best_params": {
+      "C": 10,
+      "class_weight": null
+    },
+    "gap_train_test_pp": -0.007789359974363919,
+    "gap_val_test_pp": -0.012869112082469769,
+    "test_vs_cv_sigma": 1.2854098005775298
+  }
+]

@@ -1,0 +1,10 @@
+# Наборът данни (≈1.1 GB) не се качва в GitHub – изтегля се с src/download_data.py
+data/raw/
+data/external/
+data/processed/
+results/predictions/
+logs/run_*.out
+__pycache__/
+*.pyc
+.venv/
+~$*

@@ -1,0 +1,356 @@
+2026-10-12 22:46:55 | INFO | === ФАЗА 1: предварителна обработка ===
+2026-10-12 22:46:55 | INFO | [DDoS] зареждане на Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-10-12 22:47:13 | INFO | [DDoS] 225,745 -> 223,112 реда; колони 79 -> 79
+2026-10-12 22:47:13 | INFO | [PortScan] зареждане на Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-10-12 22:47:32 | INFO | [PortScan] 286,467 -> 214,114 реда; колони 79 -> 79
+2026-10-12 22:47:37 | INFO | Фаза 1 приключи за 42.7 s
+2026-10-12 22:49:00 | INFO | === ФАЗА 1: предварителна обработка ===
+2026-10-12 22:49:01 | INFO | [DDoS] зареждане на Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-10-12 22:49:21 | INFO | [DDoS] 225,745 -> 223,112 реда; колони 79 -> 79
+2026-10-12 22:49:21 | INFO | [PortScan] зареждане на Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-10-12 22:49:42 | INFO | [PortScan] 286,467 -> 214,114 реда; колони 79 -> 79
+2026-10-12 22:49:48 | INFO | Фаза 1 приключи за 47.2 s
+2026-10-12 22:49:53 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-12 22:49:56 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 22:50:00 | INFO | [DDoS] sweep n= 1 RF  acc=0.84243 F1=0.86266 FP=2458 FN=2464 fit=3.5s pred=0.1s
+2026-10-12 22:50:02 | INFO | [DDoS] sweep n= 1 KNN acc=0.88872 F1=0.90678 FP=2461 FN=1015 fit=1.0s pred=0.5s
+2026-10-12 22:50:05 | INFO | [DDoS] sweep n= 2 RF  acc=0.99405 F1=0.99482 FP=131 FN=55 fit=3.0s pred=0.1s
+2026-10-12 22:50:07 | INFO | [DDoS] sweep n= 2 KNN acc=0.99373 F1=0.99455 FP=144 FN=52 fit=1.4s pred=0.5s
+2026-10-12 22:50:15 | INFO | [DDoS] sweep n= 3 RF  acc=0.99904 F1=0.99916 FP=12 FN=18 fit=7.9s pred=0.2s
+2026-10-12 22:50:17 | INFO | [DDoS] sweep n= 3 KNN acc=0.99926 F1=0.99936 FP=12 FN=11 fit=1.2s pred=0.5s
+2026-10-12 22:50:21 | INFO | [DDoS] sweep n= 4 RF  acc=0.99968 F1=0.99972 FP=4 FN=6 fit=3.8s pred=0.1s
+2026-10-12 22:50:22 | INFO | [DDoS] sweep n= 4 KNN acc=0.99965 F1=0.99969 FP=7 FN=4 fit=1.0s pred=0.6s
+2026-10-12 22:50:26 | INFO | [DDoS] sweep n= 6 RF  acc=0.99958 F1=0.99964 FP=5 FN=8 fit=3.9s pred=0.1s
+2026-10-12 22:50:28 | INFO | [DDoS] sweep n= 6 KNN acc=0.99968 F1=0.99972 FP=7 FN=3 fit=1.1s pred=0.6s
+2026-10-12 22:50:32 | INFO | [DDoS] sweep n= 8 RF  acc=0.99968 F1=0.99972 FP=4 FN=6 fit=4.0s pred=0.1s
+2026-10-12 22:50:34 | INFO | [DDoS] sweep n= 8 KNN acc=0.99968 F1=0.99972 FP=7 FN=3 fit=1.1s pred=0.7s
+2026-10-12 22:50:40 | INFO | [DDoS] sweep n=10 RF  acc=0.99974 F1=0.99978 FP=2 FN=6 fit=5.6s pred=0.1s
+2026-10-12 22:50:41 | INFO | [DDoS] sweep n=10 KNN acc=0.99968 F1=0.99972 FP=7 FN=3 fit=1.1s pred=0.7s
+2026-10-12 22:50:47 | INFO | [DDoS] sweep n=13 RF  acc=0.99965 F1=0.99969 FP=5 FN=6 fit=5.4s pred=0.1s
+2026-10-12 22:50:49 | INFO | [DDoS] sweep n=13 KNN acc=0.99965 F1=0.99969 FP=8 FN=3 fit=1.1s pred=0.7s
+2026-10-12 22:50:56 | INFO | [DDoS] sweep n=16 RF  acc=0.99974 F1=0.99978 FP=4 FN=4 fit=7.2s pred=0.1s
+2026-10-12 22:50:59 | INFO | [DDoS] sweep n=16 KNN acc=0.99962 F1=0.99967 FP=9 FN=3 fit=1.0s pred=1.6s
+2026-10-12 22:51:06 | INFO | [DDoS] sweep n=19 RF  acc=0.99981 F1=0.99983 FP=4 FN=2 fit=7.1s pred=0.1s
+2026-10-12 22:51:08 | INFO | [DDoS] sweep n=19 KNN acc=0.99965 F1=0.99969 FP=8 FN=3 fit=1.0s pred=1.6s
+2026-10-12 22:51:15 | INFO | [DDoS] sweep n=22 RF  acc=0.99981 F1=0.99983 FP=4 FN=2 fit=7.0s pred=0.1s
+2026-10-12 22:51:18 | INFO | [DDoS] sweep n=22 KNN acc=0.99965 F1=0.99969 FP=8 FN=3 fit=1.0s pred=1.7s
+2026-10-12 22:51:27 | INFO | [DDoS] sweep n=26 RF  acc=0.99984 F1=0.99986 FP=2 FN=3 fit=8.4s pred=0.1s
+2026-10-12 22:51:30 | INFO | [DDoS] sweep n=26 KNN acc=0.99968 F1=0.99972 FP=7 FN=3 fit=1.0s pred=1.9s
+2026-10-12 22:51:38 | INFO | [DDoS] sweep n=30 RF  acc=0.99984 F1=0.99986 FP=2 FN=3 fit=8.7s pred=0.1s
+2026-10-12 22:51:41 | INFO | [DDoS] sweep n=30 KNN acc=0.99968 F1=0.99972 FP=7 FN=3 fit=1.0s pred=1.9s
+2026-10-12 22:51:51 | INFO | [DDoS] sweep n=40 RF  acc=0.99984 F1=0.99986 FP=2 FN=3 fit=9.6s pred=0.1s
+2026-10-12 22:51:54 | INFO | [DDoS] sweep n=40 KNN acc=0.99968 F1=0.99972 FP=8 FN=2 fit=1.0s pred=2.0s
+2026-10-12 22:52:06 | INFO | [DDoS] sweep n=55 RF  acc=0.99987 F1=0.99989 FP=1 FN=3 fit=11.6s pred=0.1s
+2026-10-12 22:52:09 | INFO | [DDoS] sweep n=55 KNN acc=0.99968 F1=0.99972 FP=8 FN=2 fit=1.0s pred=2.3s
+2026-10-12 22:52:22 | INFO | [DDoS] sweep n=78 RF  acc=0.99968 F1=0.99972 FP=1 FN=9 fit=13.3s pred=0.1s
+2026-10-12 22:52:26 | INFO | [DDoS] sweep n=78 KNN acc=0.99968 F1=0.99972 FP=8 FN=2 fit=1.0s pred=2.9s
+2026-10-12 22:52:29 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 22:52:32 | INFO | [PortScan] sweep n= 1 RF  acc=0.91527 F1=0.90011 FP=1269 FN=1271 fit=2.9s pred=0.1s
+2026-10-12 22:52:33 | INFO | [PortScan] sweep n= 1 KNN acc=0.94059 F1=0.93185 FP=1242 FN=539 fit=1.0s pred=0.5s
+2026-10-12 22:52:36 | INFO | [PortScan] sweep n= 2 RF  acc=0.98789 F1=0.98573 FP=183 FN=180 fit=2.3s pred=0.1s
+2026-10-12 22:52:37 | INFO | [PortScan] sweep n= 2 KNN acc=0.98716 F1=0.98489 FP=215 FN=170 fit=1.0s pred=0.5s
+2026-10-12 22:52:40 | INFO | [PortScan] sweep n= 3 RF  acc=0.99977 F1=0.99972 FP=1 FN=6 fit=2.2s pred=0.1s
+2026-10-12 22:52:41 | INFO | [PortScan] sweep n= 3 KNN acc=0.99970 F1=0.99965 FP=6 FN=3 fit=1.0s pred=0.6s
+2026-10-12 22:52:44 | INFO | [PortScan] sweep n= 4 RF  acc=0.99987 F1=0.99984 FP=0 FN=4 fit=2.9s pred=0.1s
+2026-10-12 22:52:46 | INFO | [PortScan] sweep n= 4 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=1.0s pred=0.5s
+2026-10-12 22:52:48 | INFO | [PortScan] sweep n= 6 RF  acc=0.99983 F1=0.99980 FP=0 FN=5 fit=2.5s pred=0.1s
+2026-10-12 22:52:50 | INFO | [PortScan] sweep n= 6 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=1.0s pred=0.6s
+2026-10-12 22:52:53 | INFO | [PortScan] sweep n= 8 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=2.6s pred=0.1s
+2026-10-12 22:52:54 | INFO | [PortScan] sweep n= 8 KNN acc=0.99983 F1=0.99980 FP=2 FN=3 fit=1.0s pred=0.6s
+2026-10-12 22:52:57 | INFO | [PortScan] sweep n=10 RF  acc=0.99983 F1=0.99980 FP=0 FN=5 fit=3.2s pred=0.1s
+2026-10-12 22:52:59 | INFO | [PortScan] sweep n=10 KNN acc=0.99980 F1=0.99976 FP=3 FN=3 fit=1.0s pred=0.6s
+2026-10-12 22:53:03 | INFO | [PortScan] sweep n=13 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=3.4s pred=0.1s
+2026-10-12 22:53:04 | INFO | [PortScan] sweep n=13 KNN acc=0.99983 F1=0.99980 FP=2 FN=3 fit=1.1s pred=0.7s
+2026-10-12 22:53:09 | INFO | [PortScan] sweep n=16 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=4.2s pred=0.1s
+2026-10-12 22:53:11 | INFO | [PortScan] sweep n=16 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=0.9s pred=1.5s
+2026-10-12 22:53:15 | INFO | [PortScan] sweep n=19 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=4.5s pred=0.1s
+2026-10-12 22:53:18 | INFO | [PortScan] sweep n=19 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=0.9s pred=1.5s
+2026-10-12 22:53:22 | INFO | [PortScan] sweep n=22 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=4.4s pred=0.1s
+2026-10-12 22:53:25 | INFO | [PortScan] sweep n=22 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=1.0s pred=1.6s
+2026-10-12 22:53:31 | INFO | [PortScan] sweep n=26 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=5.5s pred=0.1s
+2026-10-12 22:53:33 | INFO | [PortScan] sweep n=26 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=0.9s pred=1.7s
+2026-10-12 22:53:39 | INFO | [PortScan] sweep n=30 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=5.5s pred=0.1s
+2026-10-12 22:53:41 | INFO | [PortScan] sweep n=30 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=0.9s pred=1.7s
+2026-10-12 22:53:48 | INFO | [PortScan] sweep n=40 RF  acc=0.99990 F1=0.99988 FP=0 FN=3 fit=6.4s pred=0.1s
+2026-10-12 22:53:51 | INFO | [PortScan] sweep n=40 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=0.9s pred=1.9s
+2026-10-12 22:53:58 | INFO | [PortScan] sweep n=55 RF  acc=0.99993 F1=0.99992 FP=0 FN=2 fit=7.6s pred=0.1s
+2026-10-12 22:54:01 | INFO | [PortScan] sweep n=55 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=0.9s pred=2.2s
+2026-10-12 22:54:11 | INFO | [PortScan] sweep n=78 RF  acc=0.99973 F1=0.99969 FP=0 FN=8 fit=9.3s pred=0.1s
+2026-10-12 22:54:14 | INFO | [PortScan] sweep n=78 KNN acc=0.99987 F1=0.99984 FP=1 FN=3 fit=1.0s pred=2.6s
+2026-10-12 22:54:26 | INFO | === ФАЗА 2: обучение и оценка; среда {'python': '3.11.0', 'sklearn': '1.6.1', 'numpy': '2.1.3', 'pandas': '3.0.6', 'platform': 'Windows-10-10.0.26200-SP0', 'processor': 'Intel64 Family 6 Model 151 Stepping 2, GenuineIntel'} ===
+2026-10-12 22:54:28 | INFO | [DDoS_RF] ---- фаза на машинно обучение: GridSearchCV {'clf__n_estimators': [50, 100, 200], 'clf__max_depth': [10, 20, None]}
+2026-10-12 22:55:15 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-12 22:55:21 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 22:55:26 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': 10, 'clf__n_estimators': 50}: F1=0.99975±0.00004 acc=0.99971 fit=3.4s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': 10, 'clf__n_estimators': 100}: F1=0.99978±0.00005 acc=0.99974 fit=5.6s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': 10, 'clf__n_estimators': 200}: F1=0.99977±0.00004 acc=0.99974 fit=10.2s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': 20, 'clf__n_estimators': 50}: F1=0.99983±0.00004 acc=0.99981 fit=3.6s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': 20, 'clf__n_estimators': 100}: F1=0.99982±0.00001 acc=0.99980 fit=6.0s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': 20, 'clf__n_estimators': 200}: F1=0.99984±0.00002 acc=0.99982 fit=11.3s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': None, 'clf__n_estimators': 50}: F1=0.99984±0.00003 acc=0.99982 fit=3.7s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': None, 'clf__n_estimators': 100}: F1=0.99985±0.00003 acc=0.99983 fit=6.2s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] CV {'clf__max_depth': None, 'clf__n_estimators': 200}: F1=0.99985±0.00003 acc=0.99983 fit=11.1s score=0.1s
+2026-10-12 22:59:54 | INFO | [DDoS_RF] най-добри параметри: {'max_depth': None, 'n_estimators': 200} (търсене 326 s)
+2026-10-12 23:00:52 | INFO | [DDoS_RF] валидиране (out-of-fold): TP=89590 TN=66562 FP=5 FN=21 acc=0.99983 (58 s)
+2026-10-12 23:00:52 | INFO | [DDoS_RF] ---- оперативна фаза: класификация на 66,934 невиждани потока
+2026-10-12 23:00:52 | INFO | [DDoS_RF] тест: TP=38395 TN=28525 FP=4 FN=10 acc=0.99979 prec=0.99990 sens=0.99974 AUC=0.99997 predict=0.22s
+2026-10-12 23:00:52 | INFO | [DDoS_KNN] ---- фаза на машинно обучение: GridSearchCV {'clf__n_neighbors': [1, 3, 5, 7, 9], 'clf__weights': ['uniform', 'distance']}
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 1, 'clf__weights': 'uniform'}: F1=0.99988±0.00008 acc=0.99987 fit=1.1s score=1.8s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 1, 'clf__weights': 'distance'}: F1=0.99988±0.00008 acc=0.99987 fit=1.0s score=1.6s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 3, 'clf__weights': 'uniform'}: F1=0.99988±0.00005 acc=0.99987 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 3, 'clf__weights': 'distance'}: F1=0.99988±0.00005 acc=0.99987 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 5, 'clf__weights': 'uniform'}: F1=0.99977±0.00009 acc=0.99974 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 5, 'clf__weights': 'distance'}: F1=0.99988±0.00005 acc=0.99986 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 7, 'clf__weights': 'uniform'}: F1=0.99974±0.00007 acc=0.99970 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 7, 'clf__weights': 'distance'}: F1=0.99982±0.00006 acc=0.99980 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 9, 'clf__weights': 'uniform'}: F1=0.99968±0.00006 acc=0.99963 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] CV {'clf__n_neighbors': 9, 'clf__weights': 'distance'}: F1=0.99980±0.00008 acc=0.99978 fit=1.0s score=1.7s
+2026-10-12 23:03:11 | INFO | [DDoS_KNN] най-добри параметри: {'n_neighbors': 1, 'weights': 'uniform'} (търсене 139 s)
+2026-10-12 23:03:25 | INFO | [DDoS_KNN] валидиране (out-of-fold): TP=89604 TN=66553 FP=14 FN=7 acc=0.99987 (13 s)
+2026-10-12 23:03:25 | INFO | [DDoS_KNN] ---- оперативна фаза: класификация на 66,934 невиждани потока
+2026-10-12 23:03:34 | INFO | [DDoS_KNN] тест: TP=38398 TN=28524 FP=5 FN=7 acc=0.99982 prec=0.99987 sens=0.99982 AUC=0.99982 predict=4.21s
+2026-10-12 23:03:36 | INFO | [PortScan_RF] ---- фаза на машинно обучение: GridSearchCV {'clf__n_estimators': [50, 100, 200], 'clf__max_depth': [10, 20, None]}
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': 10, 'clf__n_estimators': 50}: F1=0.99976±0.00009 acc=0.99979 fit=2.8s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': 10, 'clf__n_estimators': 100}: F1=0.99976±0.00007 acc=0.99979 fit=4.5s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': 10, 'clf__n_estimators': 200}: F1=0.99974±0.00007 acc=0.99978 fit=7.7s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': 20, 'clf__n_estimators': 50}: F1=0.99987±0.00004 acc=0.99989 fit=2.8s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': 20, 'clf__n_estimators': 100}: F1=0.99985±0.00005 acc=0.99987 fit=4.7s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': 20, 'clf__n_estimators': 200}: F1=0.99986±0.00006 acc=0.99988 fit=8.0s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': None, 'clf__n_estimators': 50}: F1=0.99986±0.00004 acc=0.99988 fit=2.5s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': None, 'clf__n_estimators': 100}: F1=0.99985±0.00005 acc=0.99987 fit=3.8s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] CV {'clf__max_depth': None, 'clf__n_estimators': 200}: F1=0.99986±0.00006 acc=0.99988 fit=6.7s score=0.1s
+2026-10-12 23:07:21 | INFO | [PortScan_RF] най-добри параметри: {'max_depth': 20, 'n_estimators': 50} (търсене 225 s)
+2026-10-12 23:07:33 | INFO | [PortScan_RF] валидиране (out-of-fold): TP=63558 TN=86304 FP=2 FN=15 acc=0.99989 (12 s)
+2026-10-12 23:07:33 | INFO | [PortScan_RF] ---- оперативна фаза: класификация на 64,235 невиждани потока
+2026-10-12 23:07:33 | INFO | [PortScan_RF] тест: TP=27234 TN=36989 FP=0 FN=12 acc=0.99981 prec=1.00000 sens=0.99956 AUC=0.99994 predict=0.13s
+2026-10-12 23:07:33 | INFO | [PortScan_KNN] ---- фаза на машинно обучение: GridSearchCV {'clf__n_neighbors': [1, 3, 5, 7, 9], 'clf__weights': ['uniform', 'distance']}
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 1, 'clf__weights': 'uniform'}: F1=0.99992±0.00004 acc=0.99993 fit=0.8s score=1.4s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 1, 'clf__weights': 'distance'}: F1=0.99992±0.00004 acc=0.99993 fit=0.8s score=1.4s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 3, 'clf__weights': 'uniform'}: F1=0.99990±0.00005 acc=0.99991 fit=0.8s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 3, 'clf__weights': 'distance'}: F1=0.99993±0.00005 acc=0.99994 fit=0.8s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 5, 'clf__weights': 'uniform'}: F1=0.99988±0.00007 acc=0.99990 fit=0.9s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 5, 'clf__weights': 'distance'}: F1=0.99992±0.00004 acc=0.99993 fit=0.8s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 7, 'clf__weights': 'uniform'}: F1=0.99988±0.00007 acc=0.99990 fit=0.9s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 7, 'clf__weights': 'distance'}: F1=0.99991±0.00004 acc=0.99993 fit=0.9s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 9, 'clf__weights': 'uniform'}: F1=0.99985±0.00008 acc=0.99987 fit=0.8s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] CV {'clf__n_neighbors': 9, 'clf__weights': 'distance'}: F1=0.99991±0.00003 acc=0.99992 fit=0.9s score=1.6s
+2026-10-12 23:09:34 | INFO | [PortScan_KNN] най-добри параметри: {'n_neighbors': 3, 'weights': 'distance'} (търсене 121 s)
+2026-10-12 23:09:46 | INFO | [PortScan_KNN] валидиране (out-of-fold): TP=63569 TN=86301 FP=5 FN=4 acc=0.99994 (12 s)
+2026-10-12 23:09:47 | INFO | [PortScan_KNN] ---- оперативна фаза: класификация на 64,235 невиждани потока
+2026-10-12 23:09:55 | INFO | [PortScan_KNN] тест: TP=27242 TN=36989 FP=0 FN=4 acc=0.99994 prec=1.00000 sens=0.99985 AUC=0.99993 predict=4.02s
+2026-10-12 23:09:55 | INFO | Фаза 2 приключи
+2026-10-12 23:12:27 | INFO | === ФАЗА 1: предварителна обработка ===
+2026-10-12 23:12:27 | INFO | [DDoS] зареждане на Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-10-12 23:12:46 | INFO | [DDoS] 225,745 -> 223,112 реда; колони 79 -> 79
+2026-10-12 23:12:46 | INFO | [PortScan] зареждане на Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-10-12 23:13:05 | INFO | [PortScan] 286,467 -> 214,114 реда; колони 79 -> 79
+2026-10-12 23:13:10 | INFO | Фаза 1 приключи за 43.4 s
+2026-10-12 23:13:12 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-12 23:13:15 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 23:13:17 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 23:23:17 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-12 23:23:20 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-12 23:23:23 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-13 21:11:41 | INFO | === ФАЗА 1: предварителна обработка ===
+2026-10-13 21:11:42 | INFO | [DDoS] зареждане на Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-10-13 21:12:03 | INFO | [DDoS] 225,745 -> 223,112 реда; колони 79 -> 79
+2026-10-13 21:12:03 | INFO | [PortScan] зареждане на Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-10-13 21:12:24 | INFO | [PortScan] 286,467 -> 214,114 реда; колони 79 -> 79
+2026-10-13 21:12:30 | INFO | Фаза 1 приключи за 48.6 s
+2026-10-13 21:12:32 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-13 21:12:35 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-13 21:12:38 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99% дисперсия
+2026-10-13 21:24:46 | INFO | === ФАЗА 1: предварителна обработка ===
+2026-10-13 21:24:46 | INFO | [DDoS] зареждане на Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+2026-10-13 21:25:06 | INFO | [DDoS] 225 745 -> 223 112 реда; колони 79 -> 79
+2026-10-13 21:25:06 | INFO | [PortScan] зареждане на Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+2026-10-13 21:25:26 | INFO | [PortScan] 286 467 -> 214 114 реда; колони 79 -> 79
+2026-10-13 21:25:26 | INFO | [DoS] зареждане на Wednesday-workingHours.pcap_ISCX.csv
+2026-10-13 21:26:03 | INFO | [DoS] 692 703 -> 610 687 реда; колони 79 -> 79
+2026-10-13 21:26:03 | INFO | [BruteForce] зареждане на Tuesday-WorkingHours.pcap_ISCX.csv
+2026-10-13 21:26:30 | INFO | [BruteForce] 445 909 -> 421 844 реда; колони 79 -> 79
+2026-10-13 21:26:48 | INFO | Фаза 1 приключи за 122.4 s
+2026-10-13 21:28:32 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-13 21:28:36 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:28:40 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:28:53 | INFO | [DoS] PCA: 78 -> 24 компоненти за 99 % дисперсия
+2026-10-13 21:29:18 | INFO | [DoS] sweep n= 1 MLP acc=0.87978 F1=0.79802 FP=3464 FN=6814 fit=24.8s pred=0.3s
+2026-10-13 21:29:22 | INFO | [DoS] sweep n= 1 LR  acc=0.82021 F1=0.73234 FP=9281 FN=6090 fit=3.9s pred=0.2s
+2026-10-13 21:29:37 | INFO | [DoS] sweep n= 2 MLP acc=0.94728 F1=0.91795 FP=2599 FN=1908 fit=14.2s pred=0.2s
+2026-10-13 21:29:41 | INFO | [DoS] sweep n= 2 LR  acc=0.82474 F1=0.74020 FP=9212 FN=5772 fit=4.0s pred=0.2s
+2026-10-13 21:30:12 | INFO | [DoS] sweep n= 3 MLP acc=0.97954 F1=0.96765 FP=787 FN=962 fit=30.6s pred=0.2s
+2026-10-13 21:30:16 | INFO | [DoS] sweep n= 3 LR  acc=0.88605 F1=0.81911 FP=4681 FN=5061 fit=3.7s pred=0.2s
+2026-10-13 21:30:41 | INFO | [DoS] sweep n= 4 MLP acc=0.98660 F1=0.97876 FP=431 FN=715 fit=25.3s pred=0.2s
+2026-10-13 21:30:45 | INFO | [DoS] sweep n= 4 LR  acc=0.90931 F1=0.84749 FP=2180 FN=5574 fit=3.3s pred=0.1s
+2026-10-13 21:31:11 | INFO | [DoS] sweep n= 6 MLP acc=0.99440 F1=0.99117 FP=243 FN=236 fit=25.8s pred=0.2s
+2026-10-13 21:31:14 | INFO | [DoS] sweep n= 6 LR  acc=0.91215 F1=0.85125 FP=1884 FN=5627 fit=3.4s pred=0.2s
+2026-10-13 21:31:32 | INFO | [DoS] sweep n= 8 MLP acc=0.99565 F1=0.99315 FP=217 FN=155 fit=17.9s pred=0.2s
+2026-10-13 21:31:36 | INFO | [DoS] sweep n= 8 LR  acc=0.92594 F1=0.87873 FP=2156 FN=4176 fit=3.7s pred=0.2s
+2026-10-13 21:31:52 | INFO | [DoS] sweep n=10 MLP acc=0.99722 F1=0.99562 FP=181 FN=57 fit=15.7s pred=0.2s
+2026-10-13 21:31:56 | INFO | [DoS] sweep n=10 LR  acc=0.95009 F1=0.92091 FP=1991 FN=2276 fit=3.7s pred=0.2s
+2026-10-13 21:32:10 | INFO | [DoS] sweep n=13 MLP acc=0.99772 F1=0.99641 FP=163 FN=32 fit=13.6s pred=0.2s
+2026-10-13 21:32:14 | INFO | [DoS] sweep n=13 LR  acc=0.96601 F1=0.94668 FP=1587 FN=1319 fit=4.2s pred=0.2s
+2026-10-13 21:32:35 | INFO | [DoS] sweep n=16 MLP acc=0.99827 F1=0.99728 FP=120 FN=28 fit=20.8s pred=0.2s
+2026-10-13 21:32:39 | INFO | [DoS] sweep n=16 LR  acc=0.97374 F1=0.95865 FP=1151 FN=1094 fit=3.7s pred=0.2s
+2026-10-13 21:32:55 | INFO | [DoS] sweep n=19 MLP acc=0.99839 F1=0.99746 FP=119 FN=19 fit=15.7s pred=0.2s
+2026-10-13 21:32:59 | INFO | [DoS] sweep n=19 LR  acc=0.98491 F1=0.97633 FP=771 FN=519 fit=4.1s pred=0.2s
+2026-10-13 21:33:24 | INFO | [DoS] sweep n=22 MLP acc=0.99861 F1=0.99781 FP=102 FN=17 fit=24.2s pred=0.2s
+2026-10-13 21:33:28 | INFO | [DoS] sweep n=22 LR  acc=0.98987 F1=0.98411 FP=571 FN=295 fit=4.1s pred=0.2s
+2026-10-13 21:33:49 | INFO | [DoS] sweep n=26 MLP acc=0.99855 F1=0.99772 FP=103 FN=21 fit=20.4s pred=0.2s
+2026-10-13 21:33:53 | INFO | [DoS] sweep n=26 LR  acc=0.99202 F1=0.98750 FP=501 FN=181 fit=4.3s pred=0.2s
+2026-10-13 21:34:08 | INFO | [DoS] sweep n=30 MLP acc=0.99858 F1=0.99777 FP=105 FN=16 fit=14.4s pred=0.2s
+2026-10-13 21:34:12 | INFO | [DoS] sweep n=30 LR  acc=0.99309 F1=0.98917 FP=473 FN=118 fit=4.4s pred=0.2s
+2026-10-13 21:34:31 | INFO | [DoS] sweep n=40 MLP acc=0.99860 F1=0.99779 FP=99 FN=21 fit=18.1s pred=0.2s
+2026-10-13 21:34:36 | INFO | [DoS] sweep n=40 LR  acc=0.99651 F1=0.99452 FP=236 FN=62 fit=4.9s pred=0.2s
+2026-10-13 21:34:50 | INFO | [DoS] sweep n=55 MLP acc=0.99867 F1=0.99790 FP=101 FN=13 fit=13.7s pred=0.2s
+2026-10-13 21:34:56 | INFO | [DoS] sweep n=55 LR  acc=0.99671 F1=0.99483 FP=218 FN=63 fit=6.4s pred=0.2s
+2026-10-13 21:35:12 | INFO | [DoS] sweep n=78 MLP acc=0.99863 F1=0.99785 FP=103 FN=14 fit=15.7s pred=0.2s
+2026-10-13 21:35:23 | INFO | [DoS] sweep n=78 LR  acc=0.99670 F1=0.99482 FP=219 FN=63 fit=10.5s pred=0.2s
+2026-10-13 21:35:30 | INFO | [BruteForce] PCA: 78 -> 23 компоненти за 99 % дисперсия
+2026-10-13 21:35:35 | INFO | [BruteForce] sweep n= 1 MLP acc=0.97831 F1=0.00000 FP=0 FN=1281 fit=4.5s pred=0.1s
+2026-10-13 21:35:37 | INFO | [BruteForce] sweep n= 1 LR  acc=0.97831 F1=0.00000 FP=0 FN=1281 fit=2.2s pred=0.1s
+2026-10-13 21:35:42 | INFO | [BruteForce] sweep n= 2 MLP acc=0.97831 F1=0.00000 FP=0 FN=1281 fit=4.6s pred=0.2s
+2026-10-13 21:35:44 | INFO | [BruteForce] sweep n= 2 LR  acc=0.97831 F1=0.00000 FP=0 FN=1281 fit=2.2s pred=0.1s
+2026-10-13 21:35:56 | INFO | [BruteForce] sweep n= 3 MLP acc=0.99802 F1=0.95406 FP=51 FN=66 fit=11.6s pred=0.2s
+2026-10-13 21:35:59 | INFO | [BruteForce] sweep n= 3 LR  acc=0.97809 F1=0.00000 FP=13 FN=1281 fit=2.7s pred=0.1s
+2026-10-13 21:36:07 | INFO | [BruteForce] sweep n= 4 MLP acc=0.99865 F1=0.96845 FP=27 FN=53 fit=7.9s pred=0.1s
+2026-10-13 21:36:09 | INFO | [BruteForce] sweep n= 4 LR  acc=0.97814 F1=0.00000 FP=10 FN=1281 fit=2.4s pred=0.1s
+2026-10-13 21:36:16 | INFO | [BruteForce] sweep n= 6 MLP acc=0.99893 F1=0.97511 FP=16 FN=47 fit=6.8s pred=0.1s
+2026-10-13 21:36:19 | INFO | [BruteForce] sweep n= 6 LR  acc=0.97347 F1=0.00255 FP=288 FN=1279 fit=2.4s pred=0.1s
+2026-10-13 21:36:25 | INFO | [BruteForce] sweep n= 8 MLP acc=0.99946 F1=0.98743 FP=8 FN=24 fit=5.5s pred=0.1s
+2026-10-13 21:36:27 | INFO | [BruteForce] sweep n= 8 LR  acc=0.98212 F1=0.52087 FP=349 FN=707 fit=2.5s pred=0.1s
+2026-10-13 21:36:33 | INFO | [BruteForce] sweep n=10 MLP acc=0.99907 F1=0.97827 FP=12 FN=43 fit=5.6s pred=0.1s
+2026-10-13 21:36:36 | INFO | [BruteForce] sweep n=10 LR  acc=0.98300 F1=0.54197 FP=317 FN=687 fit=3.3s pred=0.1s
+2026-10-13 21:36:44 | INFO | [BruteForce] sweep n=13 MLP acc=0.99964 F1=0.99179 FP=8 FN=13 fit=7.3s pred=0.1s
+2026-10-13 21:36:47 | INFO | [BruteForce] sweep n=13 LR  acc=0.99462 F1=0.88512 FP=262 FN=56 fit=2.6s pred=0.1s
+2026-10-13 21:36:56 | INFO | [BruteForce] sweep n=16 MLP acc=0.99956 F1=0.98985 FP=13 FN=13 fit=9.4s pred=0.1s
+2026-10-13 21:36:59 | INFO | [BruteForce] sweep n=16 LR  acc=0.99776 F1=0.94907 FP=81 FN=51 fit=3.0s pred=0.1s
+2026-10-13 21:37:09 | INFO | [BruteForce] sweep n=19 MLP acc=0.99986 F1=0.99687 FP=2 FN=6 fit=9.8s pred=0.1s
+2026-10-13 21:37:12 | INFO | [BruteForce] sweep n=19 LR  acc=0.99831 F1=0.96142 FP=65 FN=35 fit=3.1s pred=0.1s
+2026-10-13 21:37:21 | INFO | [BruteForce] sweep n=22 MLP acc=0.99985 F1=0.99648 FP=3 FN=6 fit=8.4s pred=0.1s
+2026-10-13 21:37:24 | INFO | [BruteForce] sweep n=22 LR  acc=0.99939 F1=0.98606 FP=28 FN=8 fit=2.5s pred=0.1s
+2026-10-13 21:37:32 | INFO | [BruteForce] sweep n=26 MLP acc=0.99973 F1=0.99374 FP=4 FN=12 fit=8.2s pred=0.1s
+2026-10-13 21:37:35 | INFO | [BruteForce] sweep n=26 LR  acc=0.99944 F1=0.98718 FP=23 FN=10 fit=2.8s pred=0.1s
+2026-10-13 21:37:42 | INFO | [BruteForce] sweep n=30 MLP acc=0.99980 F1=0.99531 FP=3 FN=9 fit=6.7s pred=0.1s
+2026-10-13 21:37:44 | INFO | [BruteForce] sweep n=30 LR  acc=0.99953 F1=0.98914 FP=22 FN=6 fit=2.5s pred=0.1s
+2026-10-13 21:37:53 | INFO | [BruteForce] sweep n=40 MLP acc=0.99976 F1=0.99454 FP=8 FN=6 fit=8.2s pred=0.1s
+2026-10-13 21:37:55 | INFO | [BruteForce] sweep n=40 LR  acc=0.99951 F1=0.98876 FP=23 FN=6 fit=2.5s pred=0.1s
+2026-10-13 21:38:04 | INFO | [BruteForce] sweep n=55 MLP acc=0.99985 F1=0.99648 FP=2 FN=7 fit=8.4s pred=0.2s
+2026-10-13 21:38:07 | INFO | [BruteForce] sweep n=55 LR  acc=0.99948 F1=0.98799 FP=25 FN=6 fit=2.7s pred=0.1s
+2026-10-13 21:38:15 | INFO | [BruteForce] sweep n=78 MLP acc=0.99978 F1=0.99493 FP=8 FN=5 fit=8.3s pred=0.2s
+2026-10-13 21:38:19 | INFO | [BruteForce] sweep n=78 LR  acc=0.99948 F1=0.98799 FP=25 FN=6 fit=3.2s pred=0.1s
+2026-10-13 21:38:34 | INFO | === ФАЗА 2: обучение и оценка; среда {'python': '3.11.0', 'sklearn': '1.6.1', 'numpy': '2.1.3', 'pandas': '3.0.6', 'platform': 'Windows-10-10.0.26200-SP0', 'processor': 'Intel64 Family 6 Model 151 Stepping 2, GenuineIntel'} ===
+2026-10-13 21:38:39 | INFO | [DoS_MLP] ---- фаза на машинно обучение: GridSearchCV {'clf__hidden_layer_sizes': [(32,), (64,), (64, 32)], 'clf__alpha': [0.0001, 0.001]}
+2026-10-13 21:39:03 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-13 21:39:11 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:39:22 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:39:37 | INFO | [DoS] PCA: 78 -> 24 компоненти за 99 % дисперсия
+2026-10-13 21:39:58 | INFO | [BruteForce] PCA: 78 -> 23 компоненти за 99 % дисперсия
+2026-10-13 21:41:48 | INFO | [DoS_MLP] CV {'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': (32,)}: F1=0.99800±0.00015 acc=0.99873 fit=23.8s score=0.4s
+2026-10-13 21:41:48 | INFO | [DoS_MLP] CV {'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': (64,)}: F1=0.99810±0.00014 acc=0.99879 fit=34.3s score=0.5s
+2026-10-13 21:41:48 | INFO | [DoS_MLP] CV {'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': (64, 32)}: F1=0.99807±0.00019 acc=0.99878 fit=32.3s score=0.5s
+2026-10-13 21:41:48 | INFO | [DoS_MLP] CV {'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (32,)}: F1=0.99795±0.00018 acc=0.99870 fit=19.5s score=0.4s
+2026-10-13 21:41:48 | INFO | [DoS_MLP] CV {'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (64,)}: F1=0.99810±0.00013 acc=0.99879 fit=26.1s score=0.4s
+2026-10-13 21:41:48 | INFO | [DoS_MLP] CV {'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (64, 32)}: F1=0.99800±0.00027 acc=0.99873 fit=26.9s score=0.3s
+2026-10-13 21:41:48 | INFO | [DoS_MLP] най-добри параметри: {'alpha': 0.001, 'hidden_layer_sizes': (64,)} (търсене 189 s)
+2026-10-13 21:42:22 | INFO | [DoS_MLP] валидиране (out-of-fold): TP=135517 TN=291447 FP=443 FN=73 acc=0.99879 (34 s)
+2026-10-13 21:42:22 | INFO | [DoS_MLP] ---- оперативна фаза: класификация на 183,207 невиждани потока
+2026-10-13 21:42:23 | INFO | [DoS_MLP] тест: TP=57809 TN=125049 FP=48 FN=301 acc=0.99810 prec=0.99917 sens=0.99482 AUC=0.99999 predict=0.47s
+2026-10-13 21:42:23 | INFO | [DoS_LR] ---- фаза на машинно обучение: GridSearchCV {'clf__C': [0.01, 0.1, 1, 10, 100], 'clf__class_weight': [None, 'balanced']}
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 0.01, 'clf__class_weight': None}: F1=0.98216±0.00050 acc=0.98857 fit=15.7s score=0.4s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 0.01, 'clf__class_weight': 'balanced'}: F1=0.97708±0.00056 acc=0.98521 fit=16.6s score=0.4s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 0.1, 'clf__class_weight': None}: F1=0.98519±0.00051 acc=0.99054 fit=18.4s score=0.5s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 0.1, 'clf__class_weight': 'balanced'}: F1=0.98212±0.00030 acc=0.98852 fit=17.9s score=0.4s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 1, 'clf__class_weight': None}: F1=0.98579±0.00045 acc=0.99093 fit=15.6s score=0.4s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 1, 'clf__class_weight': 'balanced'}: F1=0.98371±0.00030 acc=0.98956 fit=15.8s score=0.4s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 10, 'clf__class_weight': None}: F1=0.98579±0.00049 acc=0.99093 fit=15.9s score=0.5s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 10, 'clf__class_weight': 'balanced'}: F1=0.98396±0.00032 acc=0.98972 fit=15.4s score=0.5s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 100, 'clf__class_weight': None}: F1=0.98581±0.00048 acc=0.99094 fit=15.3s score=0.6s
+2026-10-13 21:45:19 | INFO | [DoS_LR] CV {'clf__C': 100, 'clf__class_weight': 'balanced'}: F1=0.98395±0.00033 acc=0.98971 fit=14.5s score=0.4s
+2026-10-13 21:45:19 | INFO | [DoS_LR] най-добри параметри: {'C': 100, 'class_weight': None} (търсене 175 s)
+2026-10-13 21:45:36 | INFO | [DoS_LR] валидиране (out-of-fold): TP=134533 TN=289075 FP=2815 FN=1057 acc=0.99094 (17 s)
+2026-10-13 21:45:36 | INFO | [DoS_LR] ---- оперативна фаза: класификация на 183,207 невиждани потока
+2026-10-13 21:45:37 | INFO | [DoS_LR] тест: TP=57678 TN=123956 FP=1141 FN=432 acc=0.99141 prec=0.98060 sens=0.99257 AUC=0.99930 predict=0.37s
+2026-10-13 21:45:42 | INFO | [BruteForce_MLP] ---- фаза на машинно обучение: GridSearchCV {'clf__hidden_layer_sizes': [(32,), (64,), (64, 32)], 'clf__alpha': [0.0001, 0.001]}
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] CV {'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': (32,)}: F1=0.99403±0.00330 acc=0.99974 fit=13.1s score=0.3s
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] CV {'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': (64,)}: F1=0.99445±0.00206 acc=0.99976 fit=14.4s score=0.3s
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] CV {'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': (64, 32)}: F1=0.99546±0.00189 acc=0.99980 fit=16.2s score=0.4s
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] CV {'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (32,)}: F1=0.99380±0.00331 acc=0.99973 fit=12.8s score=0.3s
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] CV {'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (64,)}: F1=0.99445±0.00212 acc=0.99976 fit=13.6s score=0.3s
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] CV {'clf__alpha': 0.001, 'clf__hidden_layer_sizes': (64, 32)}: F1=0.99507±0.00182 acc=0.99979 fit=15.2s score=0.2s
+2026-10-13 21:47:22 | INFO | [BruteForce_MLP] най-добри параметри: {'alpha': 0.0001, 'hidden_layer_sizes': (64, 32)} (търсене 100 s)
+2026-10-13 21:47:40 | INFO | [BruteForce_MLP] валидиране (out-of-fold): TP=6359 TN=288873 FP=11 FN=47 acc=0.99980 (19 s)
+2026-10-13 21:47:40 | INFO | [BruteForce_MLP] ---- оперативна фаза: класификация на 126,554 невиждани потока
+2026-10-13 21:47:41 | INFO | [BruteForce_MLP] тест: TP=2738 TN=123782 FP=26 FN=8 acc=0.99973 prec=0.99059 sens=0.99709 AUC=0.99991 predict=0.34s
+2026-10-13 21:47:41 | INFO | [BruteForce_LR] ---- фаза на машинно обучение: GridSearchCV {'clf__C': [0.01, 0.1, 1, 10, 100], 'clf__class_weight': [None, 'balanced']}
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 0.01, 'clf__class_weight': None}: F1=0.96167±0.00299 acc=0.99833 fit=10.1s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 0.01, 'clf__class_weight': 'balanced'}: F1=0.89622±0.00564 acc=0.99497 fit=10.7s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 0.1, 'clf__class_weight': None}: F1=0.97479±0.00216 acc=0.99891 fit=10.5s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 0.1, 'clf__class_weight': 'balanced'}: F1=0.96058±0.00410 acc=0.99822 fit=10.8s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 1, 'clf__class_weight': None}: F1=0.98467±0.00247 acc=0.99933 fit=10.2s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 1, 'clf__class_weight': 'balanced'}: F1=0.96739±0.00369 acc=0.99854 fit=11.7s score=0.4s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 10, 'clf__class_weight': None}: F1=0.98674±0.00230 acc=0.99942 fit=10.6s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 10, 'clf__class_weight': 'balanced'}: F1=0.97917±0.00654 acc=0.99908 fit=13.4s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 100, 'clf__class_weight': None}: F1=0.98620±0.00215 acc=0.99940 fit=10.4s score=0.3s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] CV {'clf__C': 100, 'clf__class_weight': 'balanced'}: F1=0.98229±0.00362 acc=0.99922 fit=11.0s score=0.2s
+2026-10-13 21:49:39 | INFO | [BruteForce_LR] най-добри параметри: {'C': 10, 'class_weight': None} (търсене 118 s)
+2026-10-13 21:49:51 | INFO | [BruteForce_LR] валидиране (out-of-fold): TP=6361 TN=288758 FP=126 FN=45 acc=0.99942 (11 s)
+2026-10-13 21:49:51 | INFO | [BruteForce_LR] ---- оперативна фаза: класификация на 126,554 невиждани потока
+2026-10-13 21:49:51 | INFO | [BruteForce_LR] тест: TP=2734 TN=123763 FP=45 FN=12 acc=0.99955 prec=0.98381 sens=0.99563 AUC=0.99991 predict=0.26s
+2026-10-13 21:49:51 | INFO | Фаза 2 приключи
+2026-10-13 21:51:08 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-13 21:51:11 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:51:15 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:51:25 | INFO | [DoS] PCA: 78 -> 24 компоненти за 99 % дисперсия
+2026-10-13 21:51:40 | INFO | [DoS] sweep n=24 MLP acc=0.99846 F1=0.99757 FP=113 FN=19 fit=14.5s pred=0.2s
+2026-10-13 21:51:45 | INFO | [DoS] sweep n=24 LR  acc=0.99061 F1=0.98530 FP=593 FN=210 fit=4.3s pred=0.2s
+2026-10-13 21:51:52 | INFO | [BruteForce] PCA: 78 -> 23 компоненти за 99 % дисперсия
+2026-10-13 21:52:00 | INFO | [BruteForce] sweep n=23 MLP acc=0.99986 F1=0.99687 FP=2 FN=6 fit=7.7s pred=0.1s
+2026-10-13 21:52:02 | INFO | [BruteForce] sweep n=23 LR  acc=0.99941 F1=0.98647 FP=30 FN=5 fit=2.5s pred=0.1s
+2026-10-13 21:58:03 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-13 21:58:06 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:58:10 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:58:19 | INFO | [DoS] PCA: 78 -> 24 компоненти за 99 % дисперсия
+2026-10-13 21:58:26 | INFO | [BruteForce] PCA: 78 -> 23 компоненти за 99 % дисперсия
+2026-10-13 21:59:49 | INFO | === ФАЗА 1: редукция на размерността (PCA) ===
+2026-10-13 21:59:52 | INFO | [DDoS] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 21:59:56 | INFO | [PortScan] PCA: 78 -> 22 компоненти за 99 % дисперсия
+2026-10-13 22:00:06 | INFO | [DoS] PCA: 78 -> 24 компоненти за 99 % дисперсия
+2026-10-13 22:00:13 | INFO | [BruteForce] PCA: 78 -> 23 компоненти за 99 % дисперсия
+2026-10-13 22:20:41 | INFO | === КРЪСТОСАНА ПРОВЕРКА: външен набор InSDN ===
+2026-10-13 22:20:52 | INFO | [InSDN/DDoS] 68,437 потока (1,520 DDoS)
+2026-10-13 22:20:55 | INFO | [InSDN/DDoS_RF] пренос: TP=0 TN=66917 FP=0 FN=1520 acc=0.9778 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99981 FP=0 FN=4
+2026-10-13 22:21:06 | INFO | [InSDN/DDoS_KNN] пренос: TP=0 TN=66917 FP=0 FN=1520 acc=0.9778 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99990 FP=0 FN=2
+2026-10-13 22:21:07 | INFO | [InSDN/PortScan] 164,932 потока (98,015 Probe)
+2026-10-13 22:21:12 | INFO | [InSDN/PortScan_RF] пренос: TP=0 TN=66917 FP=0 FN=98015 acc=0.4057 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99986 FP=2 FN=5
+2026-10-13 22:21:41 | INFO | [InSDN/PortScan_KNN] пренос: TP=16 TN=66779 FP=138 FN=97999 acc=0.4050 prec=0.1039 sens=0.0002 | обучение върху InSDN: acc=0.99984 FP=3 FN=5
+2026-10-13 22:21:41 | INFO | [InSDN/DoS] 117,357 потока (50,440 DoS)
+2026-10-13 22:21:45 | INFO | [InSDN/DoS_MLP] пренос: TP=0 TN=66917 FP=0 FN=50440 acc=0.5702 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99940 FP=18 FN=3
+2026-10-13 22:21:47 | INFO | [InSDN/DoS_LR] пренос: TP=0 TN=66917 FP=0 FN=50440 acc=0.5702 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99492 FP=106 FN=73
+2026-10-13 22:21:47 | INFO | [InSDN/BruteForce] 68,298 потока (1,381 BFA)
+2026-10-13 22:21:49 | INFO | [InSDN/BruteForce_MLP] пренос: TP=0 TN=66917 FP=0 FN=1381 acc=0.9798 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99980 FP=1 FN=3
+2026-10-13 22:21:50 | INFO | [InSDN/BruteForce_LR] пренос: TP=0 TN=66917 FP=0 FN=1381 acc=0.9798 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99541 FP=13 FN=81
+2026-10-13 22:22:06 | INFO | Кръстосаната проверка приключи
+2026-10-13 22:25:35 | INFO | === КРЪСТОСАНА ПРОВЕРКА: външен набор InSDN ===
+2026-10-13 22:25:46 | INFO | [InSDN/DDoS] 68,437 потока (1,520 DDoS)
+2026-10-13 22:25:49 | INFO | [InSDN/DDoS_RF] пренос: TP=0 TN=66917 FP=0 FN=1520 acc=0.9778 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99981 FP=0 FN=4
+2026-10-13 22:26:00 | INFO | [InSDN/DDoS_KNN] пренос: TP=0 TN=66917 FP=0 FN=1520 acc=0.9778 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99990 FP=0 FN=2
+2026-10-13 22:26:00 | INFO | [InSDN/PortScan] 164,932 потока (98,015 Probe)
+2026-10-13 22:26:06 | INFO | [InSDN/PortScan_RF] пренос: TP=0 TN=66917 FP=0 FN=98015 acc=0.4057 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99986 FP=2 FN=5
+2026-10-13 22:26:34 | INFO | [InSDN/PortScan_KNN] пренос: TP=16 TN=66779 FP=138 FN=97999 acc=0.4050 prec=0.1039 sens=0.0002 | обучение върху InSDN: acc=0.99984 FP=3 FN=5
+2026-10-13 22:26:35 | INFO | [InSDN/DoS] 117,357 потока (50,440 DoS)
+2026-10-13 22:26:39 | INFO | [InSDN/DoS_MLP] пренос: TP=0 TN=66917 FP=0 FN=50440 acc=0.5702 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99940 FP=18 FN=3
+2026-10-13 22:26:40 | INFO | [InSDN/DoS_LR] пренос: TP=0 TN=66917 FP=0 FN=50440 acc=0.5702 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99492 FP=106 FN=73
+2026-10-13 22:26:41 | INFO | [InSDN/BruteForce] 68,298 потока (1,381 BFA)
+2026-10-13 22:26:43 | INFO | [InSDN/BruteForce_MLP] пренос: TP=0 TN=66917 FP=0 FN=1381 acc=0.9798 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99980 FP=1 FN=3
+2026-10-13 22:26:44 | INFO | [InSDN/BruteForce_LR] пренос: TP=0 TN=66917 FP=0 FN=1381 acc=0.9798 prec=0.0000 sens=0.0000 | обучение върху InSDN: acc=0.99541 FP=13 FN=81
+2026-10-13 22:27:14 | INFO | Кръстосаната проверка приключи
+2026-10-13 23:04:00 | INFO | [overfitting] DDoS_RF: train=1.00000 cv=0.99983±0.00004 oof=0.99983 test=0.99979 (1 s)
+2026-10-13 23:04:10 | INFO | [overfitting] DDoS_KNN: train=1.00000 cv=0.99987±0.00010 oof=0.99987 test=0.99982 (10 s)
+2026-10-13 23:04:12 | INFO | [overfitting] PortScan_RF: train=1.00000 cv=0.99989±0.00003 oof=0.99989 test=0.99981 (0 s)
+2026-10-13 23:04:21 | INFO | [overfitting] PortScan_KNN: train=1.00000 cv=0.99994±0.00004 oof=0.99994 test=0.99994 (9 s)
+2026-10-13 23:04:27 | INFO | [overfitting] DoS_MLP: train=0.99822 cv=0.99879±0.00008 oof=0.99879 test=0.99810 (1 s)
+2026-10-13 23:04:27 | INFO | [overfitting] DoS_LR: train=0.99098 cv=0.99094±0.00031 oof=0.99094 test=0.99141 (1 s)
+2026-10-13 23:04:31 | INFO | [overfitting] BruteForce_MLP: train=0.99976 cv=0.99980±0.00008 oof=0.99980 test=0.99973 (1 s)
+2026-10-13 23:04:32 | INFO | [overfitting] BruteForce_LR: train=0.99947 cv=0.99942±0.00010 oof=0.99942 test=0.99955 (1 s)

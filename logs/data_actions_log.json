@@ -1,0 +1,1236 @@
+[
+  {
+    "step": 1,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:46",
+    "dataset": "CIC-IDS2017",
+    "action": "Получаване на набора данни",
+    "description": "Изтеглен MachineLearningCSV.zip (235 102 953 B), проверена SHA-256 сума, разархивирани 8 CSV файла.",
+    "rows_before": null,
+    "rows_after": null,
+    "cols_before": null,
+    "cols_after": null,
+    "details": {
+      "източник": "https://huggingface.co/datasets/bencorn/CICIDS2017/resolve/811c007f08d693a8a8b4226c197c138391806ce6/csvs/MachineLearningCSV.zip",
+      "sha256": "c3f26274b36c837ccf28ffd2dbf4582941c30b3ee70a635c6e5b2f87c4727928",
+      "файлове": [
+        [
+          "MachineLearningCVE/Wednesday-workingHours.pcap_ISCX.csv",
+          225166395
+        ],
+        [
+          "MachineLearningCVE/Tuesday-WorkingHours.pcap_ISCX.csv",
+          135078995
+        ],
+        [
+          "MachineLearningCVE/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+          52023263
+        ],
+        [
+          "MachineLearningCVE/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+          83102436
+        ],
+        [
+          "MachineLearningCVE/Monday-WorkingHours.pcap_ISCX.csv",
+          176927918
+        ],
+        [
+          "MachineLearningCVE/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+          58316725
+        ],
+        [
+          "MachineLearningCVE/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+          76906168
+        ],
+        [
+          "MachineLearningCVE/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+          77123859
+        ]
+      ]
+    }
+  },
+  {
+    "step": 2,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:49",
+    "dataset": "DDoS",
+    "action": "Зареждане и профилиране",
+    "description": "Зареден файл Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225 745 реда × 79 колони (78 характеристики + етикет).",
+    "rows_before": 225745,
+    "rows_after": 225745,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "classes": {
+        "DDoS": 128027,
+        "BENIGN": 97718
+      },
+      "nan_cells": {
+        "Flow Bytes/s": 4
+      },
+      "inf_cells": {
+        "Flow Bytes/s": 30,
+        "Flow Packets/s": 34
+      },
+      "duplicate_rows": 2633
+    }
+  },
+  {
+    "step": 3,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:49",
+    "dataset": "DDoS",
+    "action": "Анализ на излишни колони (без премахване)",
+    "description": "10 константни колони и 8 двойки идентични колони. Колоните се запазват – PCA им дава нулево/общо тегло.",
+    "rows_before": 225745,
+    "rows_after": 225745,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "константни": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "CWE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate"
+      ],
+      "идентични двойки": [
+        [
+          "Total Fwd Packets",
+          "Subflow Fwd Packets"
+        ],
+        [
+          "Total Backward Packets",
+          "Subflow Bwd Packets"
+        ],
+        [
+          "Total Length of Fwd Packets",
+          "Subflow Fwd Bytes"
+        ],
+        [
+          "Total Length of Bwd Packets",
+          "Subflow Bwd Bytes"
+        ],
+        [
+          "Fwd Packet Length Mean",
+          "Avg Fwd Segment Size"
+        ],
+        [
+          "Fwd PSH Flags",
+          "SYN Flag Count"
+        ],
+        [
+          "Fwd Header Length",
+          "Fwd Header Length.1"
+        ],
+        [
+          "RST Flag Count",
+          "ECE Flag Count"
+        ]
+      ],
+      "отрицателни стойности (минимум)": {
+        "Flow Duration": -1.0,
+        "Flow Bytes/s": -12000000.0,
+        "Flow Packets/s": -2000000.0,
+        "Flow IAT Mean": -1.0,
+        "Flow IAT Max": -1.0,
+        "Flow IAT Min": -12.0,
+        "Fwd IAT Min": -12.0,
+        "Init_Win_bytes_forward": -1.0,
+        "Init_Win_bytes_backward": -1.0
+      },
+      "редове с отрицателна Flow Duration": 2
+    }
+  },
+  {
+    "step": 4,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:49",
+    "dataset": "DDoS",
+    "action": "Нормализиране на имената на колоните",
+    "description": "Премахнати водещи/крайни интервали в 65 имена на колони (преименуване, без премахване).",
+    "rows_before": 225745,
+    "rows_after": 225745,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "преименувани": 65,
+      "бележка": "Заглавието 'Fwd Header Length' се среща два пъти в оригиналния файл; pandas автоматично именува второто копие 'Fwd Header Length.1'. И двете колони са запазени."
+    }
+  },
+  {
+    "step": 5,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:49",
+    "dataset": "DDoS",
+    "action": "Проверка на типовете данни",
+    "description": "78 числови характеристики (int64/float64) и 1 текстова колона 'Label'.",
+    "rows_before": 225745,
+    "rows_after": 225745,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "int64": 54,
+      "float64": 24
+    }
+  },
+  {
+    "step": 6,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:49",
+    "dataset": "DDoS",
+    "action": "Коригиране на NaN/Infinity",
+    "description": "Стойностите NaN и Infinity във 'Flow Bytes/s' и 'Flow Packets/s' (при Flow Duration = 0) са преизчислени с продължителност 1 µs. Редове и колони не са премахвани.",
+    "rows_before": 225745,
+    "rows_after": 225745,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "Flow Bytes/s": {
+        "NaN": 4,
+        "Infinity": 30,
+        "по клас": {
+          "BENIGN": 32,
+          "DDoS": 2
+        }
+      },
+      "Flow Packets/s": {
+        "NaN": 0,
+        "Infinity": 34,
+        "по клас": {
+          "BENIGN": 32,
+          "DDoS": 2
+        }
+      }
+    }
+  },
+  {
+    "step": 7,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:50",
+    "dataset": "DDoS",
+    "action": "Премахване на дублирани редове",
+    "description": "Премахнати 2 633 напълно идентични реда (запазено е първото срещане).",
+    "rows_before": 225745,
+    "rows_after": 223112,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "премахнати по клас": {
+        "BENIGN": 2622,
+        "DDoS": 11
+      }
+    }
+  },
+  {
+    "step": 8,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:50",
+    "dataset": "DDoS",
+    "action": "Контролна проверка",
+    "description": "Няма NaN/Infinity; няма еднакви вектори на характеристиките с противоречиви етикети.",
+    "rows_before": 223112,
+    "rows_after": 223112,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "NaN/Inf": 0,
+      "противоречиви записи": 0,
+      "класове": {
+        "DDoS": 128016,
+        "BENIGN": 95096
+      }
+    }
+  },
+  {
+    "step": 9,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:24:54",
+    "dataset": "DDoS",
+    "action": "Запис на обработения набор",
+    "description": "Записан data/processed/DDoS_clean.csv (223 112 реда × 79 колони).",
+    "rows_before": 223112,
+    "rows_after": 223112,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "размер_MB": 78.0
+    }
+  },
+  {
+    "step": 10,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:10",
+    "dataset": "PortScan",
+    "action": "Зареждане и профилиране",
+    "description": "Зареден файл Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286 467 реда × 79 колони (78 характеристики + етикет).",
+    "rows_before": 286467,
+    "rows_after": 286467,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "classes": {
+        "PortScan": 158930,
+        "BENIGN": 127537
+      },
+      "nan_cells": {
+        "Flow Bytes/s": 15
+      },
+      "inf_cells": {
+        "Flow Bytes/s": 356,
+        "Flow Packets/s": 371
+      },
+      "duplicate_rows": 72353
+    }
+  },
+  {
+    "step": 11,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:10",
+    "dataset": "PortScan",
+    "action": "Анализ на излишни колони (без премахване)",
+    "description": "10 константни колони и 8 двойки идентични колони. Колоните се запазват – PCA им дава нулево/общо тегло.",
+    "rows_before": 286467,
+    "rows_after": 286467,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "константни": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "CWE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate"
+      ],
+      "идентични двойки": [
+        [
+          "Total Fwd Packets",
+          "Subflow Fwd Packets"
+        ],
+        [
+          "Total Backward Packets",
+          "Subflow Bwd Packets"
+        ],
+        [
+          "Total Length of Fwd Packets",
+          "Subflow Fwd Bytes"
+        ],
+        [
+          "Total Length of Bwd Packets",
+          "Subflow Bwd Bytes"
+        ],
+        [
+          "Fwd Packet Length Mean",
+          "Avg Fwd Segment Size"
+        ],
+        [
+          "Fwd PSH Flags",
+          "SYN Flag Count"
+        ],
+        [
+          "Fwd Header Length",
+          "Fwd Header Length.1"
+        ],
+        [
+          "RST Flag Count",
+          "ECE Flag Count"
+        ]
+      ],
+      "отрицателни стойности (минимум)": {
+        "Flow Duration": -13.0,
+        "Flow Bytes/s": -193000000.0,
+        "Flow Packets/s": -2000000.0,
+        "Flow IAT Mean": -13.0,
+        "Flow IAT Max": -13.0,
+        "Flow IAT Min": -13.0,
+        "Init_Win_bytes_forward": -1.0,
+        "Init_Win_bytes_backward": -1.0
+      },
+      "редове с отрицателна Flow Duration": 36
+    }
+  },
+  {
+    "step": 12,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:10",
+    "dataset": "PortScan",
+    "action": "Нормализиране на имената на колоните",
+    "description": "Премахнати водещи/крайни интервали в 65 имена на колони (преименуване, без премахване).",
+    "rows_before": 286467,
+    "rows_after": 286467,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "преименувани": 65,
+      "бележка": "Заглавието 'Fwd Header Length' се среща два пъти в оригиналния файл; pandas автоматично именува второто копие 'Fwd Header Length.1'. И двете колони са запазени."
+    }
+  },
+  {
+    "step": 13,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:10",
+    "dataset": "PortScan",
+    "action": "Проверка на типовете данни",
+    "description": "78 числови характеристики (int64/float64) и 1 текстова колона 'Label'.",
+    "rows_before": 286467,
+    "rows_after": 286467,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "int64": 54,
+      "float64": 24
+    }
+  },
+  {
+    "step": 14,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:10",
+    "dataset": "PortScan",
+    "action": "Коригиране на NaN/Infinity",
+    "description": "Стойностите NaN и Infinity във 'Flow Bytes/s' и 'Flow Packets/s' (при Flow Duration = 0) са преизчислени с продължителност 1 µs. Редове и колони не са премахвани.",
+    "rows_before": 286467,
+    "rows_after": 286467,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "Flow Bytes/s": {
+        "NaN": 15,
+        "Infinity": 356,
+        "по клас": {
+          "BENIGN": 245,
+          "PortScan": 126
+        }
+      },
+      "Flow Packets/s": {
+        "NaN": 0,
+        "Infinity": 371,
+        "по клас": {
+          "BENIGN": 245,
+          "PortScan": 126
+        }
+      }
+    }
+  },
+  {
+    "step": 15,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:11",
+    "dataset": "PortScan",
+    "action": "Премахване на дублирани редове",
+    "description": "Премахнати 72 353 напълно идентични реда (запазено е първото срещане).",
+    "rows_before": 286467,
+    "rows_after": 214114,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "премахнати по клас": {
+        "PortScan": 68111,
+        "BENIGN": 4242
+      }
+    }
+  },
+  {
+    "step": 16,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:11",
+    "dataset": "PortScan",
+    "action": "Контролна проверка",
+    "description": "Няма NaN/Infinity; няма еднакви вектори на характеристиките с противоречиви етикети.",
+    "rows_before": 214114,
+    "rows_after": 214114,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "NaN/Inf": 0,
+      "противоречиви записи": 0,
+      "класове": {
+        "BENIGN": 123295,
+        "PortScan": 90819
+      }
+    }
+  },
+  {
+    "step": 17,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:14",
+    "dataset": "PortScan",
+    "action": "Запис на обработения набор",
+    "description": "Записан data/processed/PortScan_clean.csv (214 114 реда × 79 колони).",
+    "rows_before": 214114,
+    "rows_after": 214114,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "размер_MB": 63.5
+    }
+  },
+  {
+    "step": 18,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:36",
+    "dataset": "DoS",
+    "action": "Зареждане и профилиране",
+    "description": "Зареден файл Wednesday-workingHours.pcap_ISCX.csv: 692 703 реда × 79 колони (78 характеристики + етикет).",
+    "rows_before": 692703,
+    "rows_after": 692703,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "classes": {
+        "BENIGN": 440031,
+        "DoS Hulk": 231073,
+        "DoS GoldenEye": 10293,
+        "DoS slowloris": 5796,
+        "DoS Slowhttptest": 5499,
+        "Heartbleed": 11
+      },
+      "nan_cells": {
+        "Flow Bytes/s": 1008
+      },
+      "inf_cells": {
+        "Flow Bytes/s": 289,
+        "Flow Packets/s": 1297
+      },
+      "duplicate_rows": 81909
+    }
+  },
+  {
+    "step": 19,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:36",
+    "dataset": "DoS",
+    "action": "Анализ на излишни колони (без премахване)",
+    "description": "10 константни колони и 6 двойки идентични колони. Колоните се запазват – PCA им дава нулево/общо тегло.",
+    "rows_before": 692703,
+    "rows_after": 692703,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "константни": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "CWE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate"
+      ],
+      "идентични двойки": [
+        [
+          "Total Fwd Packets",
+          "Subflow Fwd Packets"
+        ],
+        [
+          "Total Backward Packets",
+          "Subflow Bwd Packets"
+        ],
+        [
+          "Total Length of Fwd Packets",
+          "Subflow Fwd Bytes"
+        ],
+        [
+          "Fwd Packet Length Mean",
+          "Avg Fwd Segment Size"
+        ],
+        [
+          "Fwd PSH Flags",
+          "SYN Flag Count"
+        ],
+        [
+          "Fwd Header Length",
+          "Fwd Header Length.1"
+        ]
+      ],
+      "отрицателни стойности (минимум)": {
+        "Flow Duration": -1.0,
+        "Flow Bytes/s": -12000000.0,
+        "Flow Packets/s": -2000000.0,
+        "Flow IAT Mean": -1.0,
+        "Flow IAT Max": -1.0,
+        "Flow IAT Min": -14.0,
+        "Fwd IAT Min": -8.0,
+        "Fwd Header Length": -11.0,
+        "Fwd Header Length.1": -11.0,
+        "Init_Win_bytes_forward": -1.0,
+        "Init_Win_bytes_backward": -1.0,
+        "min_seg_size_forward": -1.0
+      },
+      "редове с отрицателна Flow Duration": 21
+    }
+  },
+  {
+    "step": 20,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:36",
+    "dataset": "DoS",
+    "action": "Нормализиране на имената на колоните",
+    "description": "Премахнати водещи/крайни интервали в 65 имена на колони (преименуване, без премахване).",
+    "rows_before": 692703,
+    "rows_after": 692703,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "преименувани": 65,
+      "бележка": "Заглавието 'Fwd Header Length' се среща два пъти в оригиналния файл; pandas автоматично именува второто копие 'Fwd Header Length.1'. И двете колони са запазени."
+    }
+  },
+  {
+    "step": 21,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:36",
+    "dataset": "DoS",
+    "action": "Проверка на типовете данни",
+    "description": "78 числови характеристики (int64/float64) и 1 текстова колона 'Label'.",
+    "rows_before": 692703,
+    "rows_after": 692703,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "int64": 54,
+      "float64": 24
+    }
+  },
+  {
+    "step": 22,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:36",
+    "dataset": "DoS",
+    "action": "Коригиране на NaN/Infinity",
+    "description": "Стойностите NaN и Infinity във 'Flow Bytes/s' и 'Flow Packets/s' (при Flow Duration = 0) са преизчислени с продължителност 1 µs. Редове и колони не са премахвани.",
+    "rows_before": 692703,
+    "rows_after": 692703,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "Flow Bytes/s": {
+        "NaN": 1008,
+        "Infinity": 289,
+        "по клас": {
+          "DoS Hulk": 949,
+          "BENIGN": 348
+        }
+      },
+      "Flow Packets/s": {
+        "NaN": 0,
+        "Infinity": 1297,
+        "по клас": {
+          "DoS Hulk": 949,
+          "BENIGN": 348
+        }
+      }
+    }
+  },
+  {
+    "step": 23,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:36",
+    "dataset": "DoS",
+    "action": "Отстраняване на неизследвани атаки",
+    "description": "Отстранени 11 реда с етикети Heartbleed – друг тип атака, която не е обект на този детектор. Колони не са премахвани.",
+    "rows_before": 692703,
+    "rows_after": 692692,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "премахнати": {
+        "Heartbleed": 11
+      }
+    }
+  },
+  {
+    "step": 24,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:39",
+    "dataset": "DoS",
+    "action": "Премахване на дублирани редове",
+    "description": "Премахнати 81 909 напълно идентични реда (запазено е първото срещане).",
+    "rows_before": 692692,
+    "rows_after": 610783,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "премахнати по клас": {
+        "DoS Hulk": 58224,
+        "BENIGN": 22996,
+        "DoS slowloris": 411,
+        "DoS Slowhttptest": 271,
+        "DoS GoldenEye": 7
+      }
+    }
+  },
+  {
+    "step": 25,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:39",
+    "dataset": "DoS",
+    "action": "Отстраняване на противоречиви записи",
+    "description": "Отстранени 96 реда, чийто вектор на характеристиките се среща и като BENIGN, и като атака (неразрешима неяснота в етикетите).",
+    "rows_before": 610783,
+    "rows_after": 610687,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "премахнати по етикет": {
+        "BENIGN": 48,
+        "DoS Hulk": 47,
+        "DoS slowloris": 1
+      }
+    }
+  },
+  {
+    "step": 26,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:40",
+    "dataset": "DoS",
+    "action": "Контролна проверка",
+    "description": "Няма NaN/Infinity; няма еднакви вектори на характеристиките с противоречиви етикети.",
+    "rows_before": 610687,
+    "rows_after": 610687,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "NaN/Inf": 0,
+      "противоречиви записи": 96,
+      "класове": {
+        "BENIGN": 416987,
+        "DoS Hulk": 172802,
+        "DoS GoldenEye": 10286,
+        "DoS slowloris": 5384,
+        "DoS Slowhttptest": 5228
+      }
+    }
+  },
+  {
+    "step": 27,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:25:50",
+    "dataset": "DoS",
+    "action": "Запис на обработения набор",
+    "description": "Записан data/processed/DoS_clean.csv (610 687 реда × 79 колони).",
+    "rows_before": 610687,
+    "rows_after": 610687,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "размер_MB": 213.6
+    }
+  },
+  {
+    "step": 28,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:08",
+    "dataset": "BruteForce",
+    "action": "Зареждане и профилиране",
+    "description": "Зареден файл Tuesday-WorkingHours.pcap_ISCX.csv: 445 909 реда × 79 колони (78 характеристики + етикет).",
+    "rows_before": 445909,
+    "rows_after": 445909,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "classes": {
+        "BENIGN": 432074,
+        "FTP-Patator": 7938,
+        "SSH-Patator": 5897
+      },
+      "nan_cells": {
+        "Flow Bytes/s": 201
+      },
+      "inf_cells": {
+        "Flow Bytes/s": 63,
+        "Flow Packets/s": 264
+      },
+      "duplicate_rows": 24065
+    }
+  },
+  {
+    "step": 29,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:08",
+    "dataset": "BruteForce",
+    "action": "Анализ на излишни колони (без премахване)",
+    "description": "10 константни колони и 6 двойки идентични колони. Колоните се запазват – PCA им дава нулево/общо тегло.",
+    "rows_before": 445909,
+    "rows_after": 445909,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "константни": [
+        "Bwd PSH Flags",
+        "Fwd URG Flags",
+        "Bwd URG Flags",
+        "CWE Flag Count",
+        "Fwd Avg Bytes/Bulk",
+        "Fwd Avg Packets/Bulk",
+        "Fwd Avg Bulk Rate",
+        "Bwd Avg Bytes/Bulk",
+        "Bwd Avg Packets/Bulk",
+        "Bwd Avg Bulk Rate"
+      ],
+      "идентични двойки": [
+        [
+          "Total Fwd Packets",
+          "Subflow Fwd Packets"
+        ],
+        [
+          "Total Backward Packets",
+          "Subflow Bwd Packets"
+        ],
+        [
+          "Total Length of Fwd Packets",
+          "Subflow Fwd Bytes"
+        ],
+        [
+          "Fwd Packet Length Mean",
+          "Avg Fwd Segment Size"
+        ],
+        [
+          "Fwd PSH Flags",
+          "SYN Flag Count"
+        ],
+        [
+          "Fwd Header Length",
+          "Fwd Header Length.1"
+        ]
+      ],
+      "отрицателни стойности (минимум)": {
+        "Flow Duration": -4.0,
+        "Flow Packets/s": -2000000.0,
+        "Flow IAT Mean": -4.0,
+        "Flow IAT Max": -4.0,
+        "Flow IAT Min": -13.0,
+        "Fwd Header Length": -32212234632.0,
+        "Bwd Header Length": -1073741320.0,
+        "Fwd Header Length.1": -32212234632.0,
+        "Init_Win_bytes_forward": -1.0,
+        "Init_Win_bytes_backward": -1.0,
+        "min_seg_size_forward": -536870661.0
+      },
+      "редове с отрицателна Flow Duration": 17
+    }
+  },
+  {
+    "step": 30,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:08",
+    "dataset": "BruteForce",
+    "action": "Нормализиране на имената на колоните",
+    "description": "Премахнати водещи/крайни интервали в 65 имена на колони (преименуване, без премахване).",
+    "rows_before": 445909,
+    "rows_after": 445909,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "преименувани": 65,
+      "бележка": "Заглавието 'Fwd Header Length' се среща два пъти в оригиналния файл; pandas автоматично именува второто копие 'Fwd Header Length.1'. И двете колони са запазени."
+    }
+  },
+  {
+    "step": 31,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:08",
+    "dataset": "BruteForce",
+    "action": "Проверка на типовете данни",
+    "description": "78 числови характеристики (int64/float64) и 1 текстова колона 'Label'.",
+    "rows_before": 445909,
+    "rows_after": 445909,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "int64": 54,
+      "float64": 24
+    }
+  },
+  {
+    "step": 32,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:08",
+    "dataset": "BruteForce",
+    "action": "Коригиране на NaN/Infinity",
+    "description": "Стойностите NaN и Infinity във 'Flow Bytes/s' и 'Flow Packets/s' (при Flow Duration = 0) са преизчислени с продължителност 1 µs. Редове и колони не са премахвани.",
+    "rows_before": 445909,
+    "rows_after": 445909,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "Flow Bytes/s": {
+        "NaN": 201,
+        "Infinity": 63,
+        "по клас": {
+          "BENIGN": 261,
+          "FTP-Patator": 3
+        }
+      },
+      "Flow Packets/s": {
+        "NaN": 0,
+        "Infinity": 264,
+        "по клас": {
+          "BENIGN": 261,
+          "FTP-Patator": 3
+        }
+      }
+    }
+  },
+  {
+    "step": 33,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:10",
+    "dataset": "BruteForce",
+    "action": "Премахване на дублирани редове",
+    "description": "Премахнати 24 065 напълно идентични реда (запазено е първото срещане).",
+    "rows_before": 445909,
+    "rows_after": 421844,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "премахнати по клас": {
+        "BENIGN": 19382,
+        "SSH-Patator": 2678,
+        "FTP-Patator": 2005
+      }
+    }
+  },
+  {
+    "step": 34,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:11",
+    "dataset": "BruteForce",
+    "action": "Контролна проверка",
+    "description": "Няма NaN/Infinity; няма еднакви вектори на характеристиките с противоречиви етикети.",
+    "rows_before": 421844,
+    "rows_after": 421844,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "NaN/Inf": 0,
+      "противоречиви записи": 0,
+      "класове": {
+        "BENIGN": 412692,
+        "FTP-Patator": 5933,
+        "SSH-Patator": 3219
+      }
+    }
+  },
+  {
+    "step": 35,
+    "source": "step1_prepare_data",
+    "time": "2026-10-13T21:26:17",
+    "dataset": "BruteForce",
+    "action": "Запис на обработения набор",
+    "description": "Записан data/processed/BruteForce_clean.csv (421 844 реда × 79 колони).",
+    "rows_before": 421844,
+    "rows_after": 421844,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "размер_MB": 135.0
+    }
+  },
+  {
+    "step": 36,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T21:59:51",
+    "dataset": "DDoS",
+    "action": "Разделяне на обучаващо/тестово множество",
+    "description": "Стратифицирано разделяне 70/30 (random_state=42): 156 178 за обучение и валидиране, 66 934 за оперативен тест.",
+    "rows_before": 223112,
+    "rows_after": 223112,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "обучение": {
+        "общо": 156178,
+        "атака": 89611
+      },
+      "тест": {
+        "общо": 66934,
+        "атака": 38405
+      }
+    }
+  },
+  {
+    "step": 37,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T21:59:52",
+    "dataset": "DDoS",
+    "action": "Редукция на размерността (PCA)",
+    "description": "Вектор на характеристиките 78 → 22 главни компоненти (99 % обяснена дисперсия, намаление 72 %). PCA е стъпка от конвейера, обучава се само върху обучаващите данни; колоните в набора остават непроменени (79).",
+    "rows_before": null,
+    "rows_after": null,
+    "cols_before": null,
+    "cols_after": null,
+    "details": {
+      "трансформации": [
+        "sign(x)·ln(1+|x|)",
+        "StandardScaler",
+        "PCA(n_components=0.99)"
+      ],
+      "компоненти за 90/95/99 %": [
+        10,
+        14,
+        22
+      ]
+    }
+  },
+  {
+    "step": 38,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T21:59:54",
+    "dataset": "PortScan",
+    "action": "Разделяне на обучаващо/тестово множество",
+    "description": "Стратифицирано разделяне 70/30 (random_state=42): 149 879 за обучение и валидиране, 64 235 за оперативен тест.",
+    "rows_before": 214114,
+    "rows_after": 214114,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "обучение": {
+        "общо": 149879,
+        "атака": 63573
+      },
+      "тест": {
+        "общо": 64235,
+        "атака": 27246
+      }
+    }
+  },
+  {
+    "step": 39,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T21:59:56",
+    "dataset": "PortScan",
+    "action": "Редукция на размерността (PCA)",
+    "description": "Вектор на характеристиките 78 → 22 главни компоненти (99 % обяснена дисперсия, намаление 72 %). PCA е стъпка от конвейера, обучава се само върху обучаващите данни; колоните в набора остават непроменени (79).",
+    "rows_before": null,
+    "rows_after": null,
+    "cols_before": null,
+    "cols_after": null,
+    "details": {
+      "трансформации": [
+        "sign(x)·ln(1+|x|)",
+        "StandardScaler",
+        "PCA(n_components=0.99)"
+      ],
+      "компоненти за 90/95/99 %": [
+        9,
+        13,
+        22
+      ]
+    }
+  },
+  {
+    "step": 40,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T22:00:02",
+    "dataset": "DoS",
+    "action": "Разделяне на обучаващо/тестово множество",
+    "description": "Стратифицирано разделяне 70/30 (random_state=42): 427 480 за обучение и валидиране, 183 207 за оперативен тест.",
+    "rows_before": 610687,
+    "rows_after": 610687,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "обучение": {
+        "общо": 427480,
+        "атака": 135590
+      },
+      "тест": {
+        "общо": 183207,
+        "атака": 58110
+      }
+    }
+  },
+  {
+    "step": 41,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T22:00:06",
+    "dataset": "DoS",
+    "action": "Редукция на размерността (PCA)",
+    "description": "Вектор на характеристиките 78 → 24 главни компоненти (99 % обяснена дисперсия, намаление 69 %). PCA е стъпка от конвейера, обучава се само върху обучаващите данни; колоните в набора остават непроменени (79).",
+    "rows_before": null,
+    "rows_after": null,
+    "cols_before": null,
+    "cols_after": null,
+    "details": {
+      "трансформации": [
+        "sign(x)·ln(1+|x|)",
+        "StandardScaler",
+        "PCA(n_components=0.99)"
+      ],
+      "компоненти за 90/95/99 %": [
+        10,
+        14,
+        24
+      ]
+    }
+  },
+  {
+    "step": 42,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T22:00:10",
+    "dataset": "BruteForce",
+    "action": "Разделяне на обучаващо/тестово множество",
+    "description": "Стратифицирано разделяне 70/30 (random_state=42): 295 290 за обучение и валидиране, 126 554 за оперативен тест.",
+    "rows_before": 421844,
+    "rows_after": 421844,
+    "cols_before": 79,
+    "cols_after": 79,
+    "details": {
+      "обучение": {
+        "общо": 295290,
+        "атака": 6406
+      },
+      "тест": {
+        "общо": 126554,
+        "атака": 2746
+      }
+    }
+  },
+  {
+    "step": 43,
+    "source": "step2_dimensionality",
+    "time": "2026-10-13T22:00:13",
+    "dataset": "BruteForce",
+    "action": "Редукция на размерността (PCA)",
+    "description": "Вектор на характеристиките 78 → 23 главни компоненти (99 % обяснена дисперсия, намаление 71 %). PCA е стъпка от конвейера, обучава се само върху обучаващите данни; колоните в набора остават непроменени (79).",
+    "rows_before": null,
+    "rows_after": null,
+    "cols_before": null,
+    "cols_after": null,
+    "details": {
+      "трансформации": [
+        "sign(x)·ln(1+|x|)",
+        "StandardScaler",
+        "PCA(n_components=0.99)"
+      ],
+      "компоненти за 90/95/99 %": [
+        10,
+        14,
+        23
+      ]
+    }
+  },
+  {
+    "step": 44,
+    "source": "step5_external_test",
+    "time": "2026-10-13T22:25:37",
+    "dataset": "InSDN",
+    "action": "Получаване на външния набор данни",
+    "description": "Изтеглен InSDN_DatasetCSV.zip (19 302 607 B) от University College Dublin, проверена SHA-256 сума, разархивирани 3 CSV файла.",
+    "rows_before": null,
+    "rows_after": null,
+    "cols_before": null,
+    "cols_after": null,
+    "details": {
+      "източник": "https://aseados.ucd.ie/datasets/SDN/InSDN_DatasetCSV.zip",
+      "sha256": "ee89ec66705c529fef26b27dd18c6aa56d469006f7ade9cd92fd4a503e320d7d",
+      "файлове": [
+        "Normal_data.csv",
+        "OVS.csv",
+        "metasploitable-2.csv"
+      ]
+    }
+  },
+  {
+    "step": 45,
+    "source": "step5_external_test",
+    "time": "2026-10-13T22:25:40",
+    "dataset": "InSDN",
+    "action": "Зареждане",
+    "description": "Заредени 343 889 потока × 84 колони (CICFlowMeter-V3), добавена служебна колона Source File (име на изходния файл).",
+    "rows_before": 343889,
+    "rows_after": 343889,
+    "cols_before": 84,
+    "cols_after": 85,
+    "details": {
+      "етикети": {
+        "DDoS": 121942,
+        "Probe": 98129,
+        "Normal": 68424,
+        "DoS": 53616,
+        "BFA": 1405,
+        "Web-Attack": 192,
+        "BOTNET": 164,
+        "U2R": 17
+      }
+    }
+  },
+  {
+    "step": 46,
+    "source": "step5_external_test",
+    "time": "2026-10-13T22:25:40",
+    "dataset": "InSDN",
+    "action": "Съпоставяне на колоните с CIC-IDS2017",
+    "description": "50 колони са преименувани към имената от CIC-IDS2017 (напр. Tot Fwd Pkts → Total Fwd Packets); добавена производна колона Fwd Header Length.1 = Fwd Header Length (в CIC-IDS2017 е точно копие). Колоните Flow ID, Src IP, Src Port, Dst IP, Protocol и Timestamp се запазват, но не се подават на моделите (не са използвани и при обучението).",
+    "rows_before": 343889,
+    "rows_after": 343889,
+    "cols_before": 85,
+    "cols_after": 86,
+    "details": {
+      "липсващи характеристики": []
+    }
+  },
+  {
+    "step": 47,
+    "source": "step5_external_test",
+    "time": "2026-10-13T22:25:40",
+    "dataset": "InSDN",
+    "action": "Проверка за NaN/Infinity",
+    "description": "Няма невалидни стойности – корекция не е нужна.",
+    "rows_before": 343889,
+    "rows_after": 343889,
+    "cols_before": 86,
+    "cols_after": 86,
+    "details": {
+      "NaN": 0,
+      "Inf": 0
+    }
+  },
+  {
+    "step": 48,
+    "source": "step5_external_test",
+    "time": "2026-10-13T22:25:41",
+    "dataset": "InSDN",
+    "action": "Премахване на дублирани записи",
+    "description": "Премахнати 125 252 реда с идентичен вектор на 78-те характеристики и етикет (различават се само по IP адреси, портове на източника и време).",
+    "rows_before": 343889,
+    "rows_after": 218637,
+    "cols_before": 86,
+    "cols_after": 86,
+    "details": {
+      "премахнати по етикет": {
+        "DDoS": 120422,
+        "DoS": 3176,
+        "Normal": 1507,
+        "Probe": 114,
+        "BFA": 24,
+        "Web-Attack": 9
+      }
+    }
+  },
+  {
+    "step": 49,
+    "source": "step5_external_test",
+    "time": "2026-10-13T22:25:45",
+    "dataset": "InSDN",
+    "action": "Запис на обработения набор",
+    "description": "Записан data/processed/InSDN_clean.csv (218 637 реда × 86 колони).",
+    "rows_before": 218637,
+    "rows_after": 218637,
+    "cols_before": 86,
+    "cols_after": 86,
+    "details": {}
+  }
+]
