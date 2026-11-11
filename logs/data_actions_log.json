@@ -1232,5 +1232,105 @@
     "cols_before": 86,
     "cols_after": 86,
     "details": {}
+  },
+  {
+    "step": 50,
+    "source": "step6_kdd99",
+    "time": "2026-11-11T21:57:55",
+    "dataset": "KDD99",
+    "action": "Получаване на набора данни",
+    "description": "KDD Cup 99 (10 %): 494 021 записа × 42 колони (41 характеристики + етикет), изтеглен чрез scikit-learn (fetch_kddcup99) с проверка на SHA-256.",
+    "rows_before": 494021,
+    "rows_after": 494021,
+    "cols_before": 42,
+    "cols_after": 42,
+    "details": {
+      "източник": "http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html",
+      "етикети": {
+        "smurf": 280790,
+        "neptune": 107201,
+        "normal": 97278,
+        "back": 2203,
+        "satan": 1589,
+        "ipsweep": 1247,
+        "portsweep": 1040,
+        "warezclient": 1020,
+        "teardrop": 979,
+        "pod": 264,
+        "nmap": 231,
+        "guess_passwd": 53,
+        "buffer_overflow": 30,
+        "land": 21,
+        "warezmaster": 20,
+        "imap": 12,
+        "rootkit": 10,
+        "loadmodule": 9,
+        "ftp_write": 8,
+        "multihop": 7,
+        "phf": 4,
+        "perl": 3,
+        "spy": 2
+      }
+    }
+  },
+  {
+    "step": 51,
+    "source": "step6_kdd99",
+    "time": "2026-11-11T21:57:56",
+    "dataset": "KDD99",
+    "action": "Премахване на дублирани записи",
+    "description": "Премахнати 348 435 напълно идентични реда (70.5 %).",
+    "rows_before": 494021,
+    "rows_after": 145586,
+    "cols_before": 42,
+    "cols_after": 42,
+    "details": {
+      "премахнати по етикет": {
+        "smurf": 280149,
+        "neptune": 55381,
+        "normal": 9446,
+        "back": 1235,
+        "satan": 683,
+        "portsweep": 624,
+        "ipsweep": 596,
+        "warezclient": 127,
+        "nmap": 73,
+        "teardrop": 61,
+        "pod": 58,
+        "land": 2
+      }
+    }
+  },
+  {
+    "step": 52,
+    "source": "step6_kdd99",
+    "time": "2026-11-11T21:57:56",
+    "dataset": "KDD99",
+    "action": "Кодиране на символните характеристики (в конвейера)",
+    "description": "protocol_type, service и flag се кодират с one-hot вътре в конвейера (обучава се само върху обучаващите данни); колоните в набора остават непроменени.",
+    "rows_before": 145586,
+    "rows_after": 145586,
+    "cols_before": 42,
+    "cols_after": 42,
+    "details": {
+      "брой стойности": {
+        "protocol_type": 3,
+        "service": 66,
+        "flag": 11
+      }
+    }
+  },
+  {
+    "step": 53,
+    "source": "step6_kdd99",
+    "time": "2026-11-11T21:58:42",
+    "dataset": "KDD99",
+    "action": "Противоречиви записи (DoS)",
+    "description": "От подмножеството normal + neptune, back, teardrop, pod, land са отстранени 2 реда с еднакъв вектор и двата етикета.",
+    "rows_before": 141763,
+    "rows_after": 141761,
+    "cols_before": 42,
+    "cols_after": 42,
+    "details": {}
   }
 ]

@@ -1,0 +1,671 @@
+{
+  "dataset": "KDD Cup 1999 (10 %)",
+  "source": "http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html",
+  "sklearn": "1.6.1",
+  "raw_rows": 494021,
+  "unique_rows": 145586,
+  "labels_raw": {
+    "smurf": 280790,
+    "neptune": 107201,
+    "normal": 97278,
+    "back": 2203,
+    "satan": 1589,
+    "ipsweep": 1247,
+    "portsweep": 1040,
+    "warezclient": 1020,
+    "teardrop": 979,
+    "pod": 264,
+    "nmap": 231,
+    "guess_passwd": 53,
+    "buffer_overflow": 30,
+    "land": 21,
+    "warezmaster": 20,
+    "imap": 12,
+    "rootkit": 10,
+    "loadmodule": 9,
+    "ftp_write": 8,
+    "multihop": 7,
+    "phf": 4,
+    "perl": 3,
+    "spy": 2
+  },
+  "labels_unique": {
+    "normal": 87832,
+    "neptune": 51820,
+    "back": 968,
+    "teardrop": 918,
+    "satan": 906,
+    "warezclient": 893,
+    "ipsweep": 651,
+    "smurf": 641,
+    "portsweep": 416,
+    "pod": 206,
+    "nmap": 158,
+    "guess_passwd": 53,
+    "buffer_overflow": 30,
+    "warezmaster": 20,
+    "land": 19,
+    "imap": 12,
+    "rootkit": 10,
+    "loadmodule": 9,
+    "ftp_write": 8,
+    "multihop": 7,
+    "phf": 4,
+    "perl": 3,
+    "spy": 2
+  },
+  "symbolic_values": {
+    "protocol_type": 3,
+    "service": 66,
+    "flag": 11
+  },
+  "mapping": {
+    "DDoS": [
+      "smurf"
+    ],
+    "PortScan": [
+      "portsweep",
+      "nmap",
+      "satan",
+      "ipsweep"
+    ],
+    "DoS": [
+      "neptune",
+      "back",
+      "teardrop",
+      "pod",
+      "land"
+    ],
+    "BruteForce": [
+      "guess_passwd"
+    ]
+  },
+  "subsets": {
+    "DDoS": {
+      "kdd_labels": [
+        "smurf"
+      ],
+      "total": 88473,
+      "attack": 641,
+      "normal": 87832,
+      "attack_raw": 280790
+    },
+    "PortScan": {
+      "kdd_labels": [
+        "portsweep",
+        "nmap",
+        "satan",
+        "ipsweep"
+      ],
+      "total": 89963,
+      "attack": 2131,
+      "normal": 87832,
+      "attack_raw": 4107
+    },
+    "DoS": {
+      "kdd_labels": [
+        "neptune",
+        "back",
+        "teardrop",
+        "pod",
+        "land"
+      ],
+      "total": 141761,
+      "attack": 53930,
+      "normal": 87831,
+      "attack_raw": 110668
+    },
+    "BruteForce": {
+      "kdd_labels": [
+        "guess_passwd"
+      ],
+      "total": 87885,
+      "attack": 53,
+      "normal": 87832,
+      "attack_raw": 53
+    }
+  },
+  "models": [
+    {
+      "attack": "DDoS",
+      "algorithm": "RF",
+      "cic": {
+        "TP": 38395,
+        "TN": 28525,
+        "FP": 4,
+        "FN": 10,
+        "accuracy": 0.999790838736666,
+        "precision": 0.9998958306205891,
+        "sensitivity": 0.9997396172373388,
+        "specificity": 0.9998597917908093,
+        "f1": 0.9998177178271965,
+        "fpr": 0.0001402082091906481,
+        "fnr": 0.0002603827626611118,
+        "mcc": 0.9995723960495244,
+        "roc_auc": 0.9999724452809559
+      },
+      "params": {
+        "max_depth": null,
+        "n_estimators": 200
+      },
+      "train_size": 61931,
+      "test_size": 26542,
+      "train_attack": 449,
+      "test_attack": 192,
+      "encoded_features": 74,
+      "pca_components": 54,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9999354122514097,
+          "std": 6.041717768850107e-05
+        },
+        "precision": {
+          "mean": 0.9955555555555555,
+          "std": 0.005443310539518154
+        },
+        "recall": {
+          "mean": 0.9955555555555555,
+          "std": 0.005443310539518154
+        },
+        "f1": {
+          "mean": 0.9955431409062694,
+          "std": 0.0041607415098854714
+        }
+      },
+      "test": {
+        "TP": 192,
+        "TN": 26350,
+        "FP": 0,
+        "FN": 0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mcc": 1.0,
+        "roc_auc": 1.0
+      },
+      "timing": {
+        "cv_seconds": 8.5,
+        "fit_seconds": 2.1,
+        "latency_us_per_flow": 5.23
+      }
+    },
+    {
+      "attack": "DDoS",
+      "algorithm": "KNN",
+      "cic": {
+        "TP": 38398,
+        "TN": 28524,
+        "FP": 5,
+        "FN": 7,
+        "accuracy": 0.9998207189171423,
+        "precision": 0.999869801838398,
+        "sensitivity": 0.9998177320661372,
+        "specificity": 0.9998247397385117,
+        "f1": 0.9998437662743465,
+        "fpr": 0.00017526026148831014,
+        "fnr": 0.0001822679338627783,
+        "mcc": 0.9996334631978115,
+        "roc_auc": 0.9998212359023245
+      },
+      "params": {
+        "n_neighbors": 1,
+        "weights": "uniform"
+      },
+      "train_size": 61931,
+      "test_size": 26542,
+      "train_attack": 449,
+      "test_attack": 192,
+      "encoded_features": 74,
+      "pca_components": 54,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9999192636848054,
+          "std": 0.00010212425836163154
+        },
+        "precision": {
+          "mean": 0.991256038647343,
+          "std": 0.012684632604658028
+        },
+        "recall": {
+          "mean": 0.9977777777777778,
+          "std": 0.004444444444444429
+        },
+        "f1": {
+          "mean": 0.994462860650706,
+          "std": 0.0069982014580862945
+        }
+      },
+      "test": {
+        "TP": 192,
+        "TN": 26350,
+        "FP": 0,
+        "FN": 0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mcc": 1.0,
+        "roc_auc": 1.0
+      },
+      "timing": {
+        "cv_seconds": 4.6,
+        "fit_seconds": 0.51,
+        "latency_us_per_flow": 40.4
+      }
+    },
+    {
+      "attack": "PortScan",
+      "algorithm": "RF",
+      "cic": {
+        "TP": 27234,
+        "TN": 36989,
+        "FP": 0,
+        "FN": 12,
+        "accuracy": 0.9998131859578112,
+        "precision": 1.0,
+        "sensitivity": 0.9995595683770094,
+        "specificity": 1.0,
+        "f1": 0.9997797356828194,
+        "fpr": 0.0,
+        "fnr": 0.0004404316229905307,
+        "mcc": 0.999617624722973,
+        "roc_auc": 0.9999431892541415
+      },
+      "params": {
+        "max_depth": 20,
+        "n_estimators": 50
+      },
+      "train_size": 62974,
+      "test_size": 26989,
+      "train_attack": 1492,
+      "test_attack": 639,
+      "encoded_features": 101,
+      "pca_components": 79,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9993806978035693,
+          "std": 0.00024290453735701764
+        },
+        "precision": {
+          "mean": 0.9952607476039276,
+          "std": 0.006239458169046808
+        },
+        "recall": {
+          "mean": 0.9785459361181568,
+          "std": 0.00658275322640336
+        },
+        "f1": {
+          "mean": 0.9868176141116187,
+          "std": 0.005151594921857888
+        }
+      },
+      "test": {
+        "TP": 623,
+        "TN": 26349,
+        "FP": 1,
+        "FN": 16,
+        "accuracy": 0.9993701137500464,
+        "precision": 0.9983974358974359,
+        "sensitivity": 0.974960876369327,
+        "specificity": 0.9999620493358634,
+        "f1": 0.9865399841646872,
+        "fpr": 3.795066413662239e-05,
+        "fnr": 0.025039123630672927,
+        "mcc": 0.9862904757029238,
+        "roc_auc": 0.998400726942299
+      },
+      "timing": {
+        "cv_seconds": 13.1,
+        "fit_seconds": 3.41,
+        "latency_us_per_flow": 5.18
+      }
+    },
+    {
+      "attack": "PortScan",
+      "algorithm": "KNN",
+      "cic": {
+        "TP": 27242,
+        "TN": 36989,
+        "FP": 0,
+        "FN": 4,
+        "accuracy": 0.9999377286526038,
+        "precision": 1.0,
+        "sensitivity": 0.9998531894590031,
+        "specificity": 1.0,
+        "f1": 0.9999265893407723,
+        "fpr": 0.0,
+        "fnr": 0.00014681054099684358,
+        "mcc": 0.999872530260009,
+        "roc_auc": 0.9999265927449853
+      },
+      "params": {
+        "n_neighbors": 3,
+        "weights": "distance"
+      },
+      "train_size": 62974,
+      "test_size": 26989,
+      "train_attack": 1492,
+      "test_attack": 639,
+      "encoded_features": 101,
+      "pca_components": 79,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9994600931286524,
+          "std": 0.00024291080185012036
+        },
+        "precision": {
+          "mean": 0.9959229319775276,
+          "std": 0.004980769589094706
+        },
+        "recall": {
+          "mean": 0.981232744495073,
+          "std": 0.005836281834792387
+        },
+        "f1": {
+          "mean": 0.9885202537871182,
+          "std": 0.005153105366001886
+        }
+      },
+      "test": {
+        "TP": 621,
+        "TN": 26349,
+        "FP": 1,
+        "FN": 18,
+        "accuracy": 0.9992960094853459,
+        "precision": 0.9983922829581994,
+        "sensitivity": 0.971830985915493,
+        "specificity": 0.9999620493358634,
+        "f1": 0.9849325931800159,
+        "fpr": 3.795066413662239e-05,
+        "fnr": 0.028169014084507043,
+        "mcc": 0.9846660609555881,
+        "roc_auc": 0.9882415598376257
+      },
+      "timing": {
+        "cv_seconds": 7.7,
+        "fit_seconds": 1.0,
+        "latency_us_per_flow": 50.77
+      }
+    },
+    {
+      "attack": "DoS",
+      "algorithm": "MLP",
+      "cic": {
+        "TP": 57809,
+        "TN": 125049,
+        "FP": 48,
+        "FN": 301,
+        "accuracy": 0.9980950509532933,
+        "precision": 0.9991703683218971,
+        "sensitivity": 0.994820168645672,
+        "specificity": 0.9996162977529437,
+        "f1": 0.9969905231660731,
+        "fpr": 0.0003837022470562843,
+        "fnr": 0.0051798313543279986,
+        "mcc": 0.995602096000358,
+        "roc_auc": 0.9999850750819945
+      },
+      "params": {
+        "alpha": 0.001,
+        "hidden_layer_sizes": [
+          64
+        ]
+      },
+      "train_size": 99232,
+      "test_size": 42529,
+      "train_attack": 37751,
+      "test_attack": 16179,
+      "encoded_features": 115,
+      "pca_components": 89,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9996472927194662,
+          "std": 7.125004035328236e-05
+        },
+        "precision": {
+          "mean": 0.9994703459779893,
+          "std": 0.00022150602595433214
+        },
+        "recall": {
+          "mean": 0.999602663039236,
+          "std": 0.00011845149096277703
+        },
+        "f1": {
+          "mean": 0.9995364773332543,
+          "std": 9.360195498611115e-05
+        }
+      },
+      "test": {
+        "TP": 16176,
+        "TN": 26347,
+        "FP": 3,
+        "FN": 3,
+        "accuracy": 0.999858919795904,
+        "precision": 0.999814574448359,
+        "sensitivity": 0.999814574448359,
+        "specificity": 0.9998861480075901,
+        "f1": 0.999814574448359,
+        "fpr": 0.00011385199240986717,
+        "fnr": 0.00018542555164101615,
+        "mcc": 0.9997007224559491,
+        "roc_auc": 0.9999028585911434
+      },
+      "timing": {
+        "cv_seconds": 12.2,
+        "fit_seconds": 4.22,
+        "latency_us_per_flow": 4.0
+      }
+    },
+    {
+      "attack": "DoS",
+      "algorithm": "LR",
+      "cic": {
+        "TP": 57678,
+        "TN": 123956,
+        "FP": 1141,
+        "FN": 432,
+        "accuracy": 0.9914140835230095,
+        "precision": 0.9806015063159863,
+        "sensitivity": 0.9925658234383067,
+        "specificity": 0.9908790778355996,
+        "f1": 0.9865473920071154,
+        "fpr": 0.009120922164400426,
+        "fnr": 0.00743417656169334,
+        "mcc": 0.9802816144672208,
+        "roc_auc": 0.999303281799426
+      },
+      "params": {
+        "C": 100,
+        "class_weight": null
+      },
+      "train_size": 99232,
+      "test_size": 42529,
+      "train_attack": 37751,
+      "test_attack": 16179,
+      "encoded_features": 115,
+      "pca_components": 89,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9995868271344616,
+          "std": 8.668911950528422e-05
+        },
+        "precision": {
+          "mean": 0.9993379762879648,
+          "std": 0.00022144741000800476
+        },
+        "recall": {
+          "mean": 0.9995761694648575,
+          "std": 9.91195669428486e-05
+        },
+        "f1": {
+          "mean": 0.9994570422113538,
+          "std": 0.00011389283351385878
+        }
+      },
+      "test": {
+        "TP": 16175,
+        "TN": 26342,
+        "FP": 8,
+        "FN": 4,
+        "accuracy": 0.9997178395918079,
+        "precision": 0.9995056540814435,
+        "sensitivity": 0.9997527659311453,
+        "specificity": 0.9996963946869071,
+        "f1": 0.9996291947345652,
+        "fpr": 0.00030360531309297915,
+        "fnr": 0.00024723406885468816,
+        "mcc": 0.9994014933609923,
+        "roc_auc": 0.9999218046022832
+      },
+      "timing": {
+        "cv_seconds": 8.5,
+        "fit_seconds": 2.27,
+        "latency_us_per_flow": 3.46
+      }
+    },
+    {
+      "attack": "BruteForce",
+      "algorithm": "MLP",
+      "cic": {
+        "TP": 2738,
+        "TN": 123782,
+        "FP": 26,
+        "FN": 8,
+        "accuracy": 0.9997313399813519,
+        "precision": 0.9905933429811867,
+        "sensitivity": 0.9970866715222141,
+        "specificity": 0.9997899974153528,
+        "f1": 0.9938294010889293,
+        "fpr": 0.00021000258464719566,
+        "fnr": 0.0029133284777858705,
+        "mcc": 0.9936976241766456,
+        "roc_auc": 0.9999114027697328
+      },
+      "params": {
+        "alpha": 0.0001,
+        "hidden_layer_sizes": [
+          64,
+          32
+        ]
+      },
+      "train_size": 61519,
+      "test_size": 26366,
+      "train_attack": 37,
+      "test_attack": 16,
+      "encoded_features": 74,
+      "pca_components": 54,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9998537047906211,
+          "std": 9.47804964002936e-05
+        },
+        "precision": {
+          "mean": 0.95,
+          "std": 0.09999999999999999
+        },
+        "recall": {
+          "mean": 0.8071428571428572,
+          "std": 0.14214106244380284
+        },
+        "f1": {
+          "mean": 0.8614985014985015,
+          "std": 0.09464899670051762
+        }
+      },
+      "test": {
+        "TP": 16,
+        "TN": 26350,
+        "FP": 0,
+        "FN": 0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mcc": 1.0,
+        "roc_auc": 1.0
+      },
+      "timing": {
+        "cv_seconds": 3.9,
+        "fit_seconds": 1.8,
+        "latency_us_per_flow": 2.98
+      }
+    },
+    {
+      "attack": "BruteForce",
+      "algorithm": "LR",
+      "cic": {
+        "TP": 2734,
+        "TN": 123763,
+        "FP": 45,
+        "FN": 12,
+        "accuracy": 0.9995495993805016,
+        "precision": 0.9838071248650594,
+        "sensitivity": 0.9956300072833212,
+        "specificity": 0.9996365339881106,
+        "f1": 0.989683257918552,
+        "fpr": 0.0003634660118893771,
+        "fnr": 0.004369992716678805,
+        "mcc": 0.9894714868256186,
+        "roc_auc": 0.9999078172306174
+      },
+      "params": {
+        "C": 10,
+        "class_weight": null
+      },
+      "train_size": 61519,
+      "test_size": 26366,
+      "train_attack": 37,
+      "test_attack": 16,
+      "encoded_features": 74,
+      "pca_components": 54,
+      "cv": {
+        "accuracy": {
+          "mean": 0.9999349804941483,
+          "std": 9.478140271203338e-05
+        },
+        "precision": {
+          "mean": 0.95,
+          "std": 0.09999999999999999
+        },
+        "recall": {
+          "mean": 0.9464285714285715,
+          "std": 0.0658538889806635
+        },
+        "f1": {
+          "mean": 0.9466666666666667,
+          "std": 0.07774602526460399
+        }
+      },
+      "test": {
+        "TP": 16,
+        "TN": 26350,
+        "FP": 0,
+        "FN": 0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "fpr": 0.0,
+        "fnr": 0.0,
+        "mcc": 1.0,
+        "roc_auc": 1.0
+      },
+      "timing": {
+        "cv_seconds": 2.2,
+        "fit_seconds": 0.45,
+        "latency_us_per_flow": 2.45
+      }
+    }
+  ]
+}

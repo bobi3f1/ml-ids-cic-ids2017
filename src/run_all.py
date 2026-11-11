@@ -6,7 +6,7 @@ from pathlib import Path
 from config import setup_console
 
 STEPS = ["step1_prepare_data.py", "step2_dimensionality.py", "step3_train_evaluate.py", "step4_figures.py",
-         "overfitting_check.py", "step5_external_test.py"]
+         "overfitting_check.py", "step5_external_test.py", "step6_kdd99.py"]
 
 if __name__ == "__main__":
     setup_console()

@@ -56,6 +56,29 @@ CICFlowMeter, която определя посоката на потока р�
 python src/step5_external_test.py
 ```
 
+## Проверка на метода върху KDD Cup 99
+
+Класическият набор **KDD Cup 99** (UCI KDD Archive; извлечен от записите на DARPA 1998, MIT Lincoln Laboratory) е
+обработен по същия начин: премахнати са дубликатите (70,5 % от 494 021 записа в 10-процентното подмножество),
+символните характеристики `protocol_type`, `service` и `flag` се кодират с one-hot вътре в конвейера, след което
+се прилагат същите трансформации, PCA и същите алгоритми с хиперпараметрите, избрани върху CIC-IDS2017.
+Оригиналният сървър на UCI връща HTTP 403 за архивите, затова данните се изтеглят чрез `sklearn.datasets.fetch_kddcup99`
+(с проверка на SHA-256).
+
+| Атака в изследването | Атаки в KDD Cup 99 | Accuracy (тест, 30 %) | Sensitivity |
+|---|---|---:|---:|
+| DDoS | smurf | 100,000 % (RF, k-NN) | 100,000 % |
+| PortScan | Probe: portsweep, nmap, satan, ipsweep | 99,937 % (RF) / 99,930 % (k-NN) | 97,496 % / 97,183 % |
+| DoS | neptune, back, teardrop, pod, land | 99,986 % (MLP) / 99,972 % (LR) | 99,981 % / 99,975 % |
+| Brute Force | guess_passwd (само 53 записа) | 100,000 % (MLP, LR) | 100,000 % |
+
+Методът се пренася и към този набор, но KDD Cup 99 е от 1998 г. и атаките в него се разграничават лесно – той
+служи за проверка на метода, а не за оценка на реален IDS.
+
+```bash
+python src/step6_kdd99.py
+```
+
 ## Правила при обработката на данните
 
 * **Нито една колона не е премахната** – всички 79 колони (78 характеристики + `Label`) се запазват.
@@ -108,11 +131,12 @@ src/
   overfitting_check.py     проверка за преобучение (обучение / кръстосано валидиране / тест)
   external_data.py         външният набор InSDN: съпоставяне на колоните с CIC-IDS2017
   step5_external_test.py   кръстосана проверка: пренос на моделите (А) и обучение върху InSDN (Б), фигури p4_*
+  step6_kdd99.py           проверка на метода върху KDD Cup 99, фигури p5_*
   detect.py                оперативна детекция върху нов CSV с потоци
   run_all.py               целият експеримент наведнъж
 models/    8-те обучени модела (*.joblib)
 results/   figures/ (PNG), tables/ (CSV), metrics.json, phase1_summary.json, dimensionality_summary.json,
-           overfitting_check.json, external_insdn.json
+           overfitting_check.json, external_insdn.json, kdd99.json
 logs/      data_actions_log.md, training_log.md, experiment_log.txt
 ```
 

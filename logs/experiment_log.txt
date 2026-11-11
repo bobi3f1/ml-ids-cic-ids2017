@@ -354,3 +354,17 @@
 2026-10-13 23:04:27 | INFO | [overfitting] DoS_LR: train=0.99098 cv=0.99094±0.00031 oof=0.99094 test=0.99141 (1 s)
 2026-10-13 23:04:31 | INFO | [overfitting] BruteForce_MLP: train=0.99976 cv=0.99980±0.00008 oof=0.99980 test=0.99973 (1 s)
 2026-10-13 23:04:32 | INFO | [overfitting] BruteForce_LR: train=0.99947 cv=0.99942±0.00010 oof=0.99942 test=0.99955 (1 s)
+2026-11-11 21:57:53 | INFO | === ПРОВЕРКА НА МЕТОДА: KDD Cup 99 ===
+2026-11-11 21:57:56 | INFO | [KDD99/DDoS] 88,473 записа (641 атака: smurf)
+2026-11-11 21:58:07 | INFO | [KDD99/DDoS_RF] CV acc=0.99994±0.00006 | тест: TP=192 TN=26350 FP=0 FN=0 acc=1.00000 prec=1.00000 sens=1.00000 (PCA 54)
+2026-11-11 21:58:14 | INFO | [KDD99/DDoS_KNN] CV acc=0.99992±0.00010 | тест: TP=192 TN=26350 FP=0 FN=0 acc=1.00000 prec=1.00000 sens=1.00000 (PCA 54)
+2026-11-11 21:58:14 | INFO | [KDD99/PortScan] 89,963 записа (2,131 атака: portsweep, nmap, satan, ipsweep)
+2026-11-11 21:58:31 | INFO | [KDD99/PortScan_RF] CV acc=0.99938±0.00024 | тест: TP=623 TN=26349 FP=1 FN=16 acc=0.99937 prec=0.99840 sens=0.97496 (PCA 79)
+2026-11-11 21:58:42 | INFO | [KDD99/PortScan_KNN] CV acc=0.99946±0.00024 | тест: TP=621 TN=26349 FP=1 FN=18 acc=0.99930 prec=0.99839 sens=0.97183 (PCA 79)
+2026-11-11 21:58:42 | INFO | [KDD99/DoS] 141,761 записа (53,930 атака: neptune, back, teardrop, pod, land)
+2026-11-11 21:58:59 | INFO | [KDD99/DoS_MLP] CV acc=0.99965±0.00007 | тест: TP=16176 TN=26347 FP=3 FN=3 acc=0.99986 prec=0.99981 sens=0.99981 (PCA 89)
+2026-11-11 21:59:11 | INFO | [KDD99/DoS_LR] CV acc=0.99959±0.00009 | тест: TP=16175 TN=26342 FP=8 FN=4 acc=0.99972 prec=0.99951 sens=0.99975 (PCA 89)
+2026-11-11 21:59:11 | INFO | [KDD99/BruteForce] 87,885 записа (53 атака: guess_passwd)
+2026-11-11 21:59:16 | INFO | [KDD99/BruteForce_MLP] CV acc=0.99985±0.00009 | тест: TP=16 TN=26350 FP=0 FN=0 acc=1.00000 prec=1.00000 sens=1.00000 (PCA 54)
+2026-11-11 21:59:19 | INFO | [KDD99/BruteForce_LR] CV acc=0.99993±0.00009 | тест: TP=16 TN=26350 FP=0 FN=0 acc=1.00000 prec=1.00000 sens=1.00000 (PCA 54)
+2026-11-11 21:59:20 | INFO | Проверката с KDD Cup 99 приключи
